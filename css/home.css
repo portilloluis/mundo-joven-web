@@ -1,0 +1,77 @@
+.item, .itemPromociones {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  position: relative;
+  transition: all 0.5s ease;
+  width: 95%; }
+  .item figure, .itemPromociones figure {
+    background: transparent;
+    width: 100%; }
+    .item figure img, .itemPromociones figure img {
+      display: block;
+      width: 100%; }
+  .item:hover, .itemPromociones:hover {
+    box-shadow: 5px 5px 13px 2px rgba(0, 0, 0, 0.4); }
+  .item .infoContainer, .itemPromociones .infoContainer {
+    border: 1px solid #b3b3b3;
+    border-top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1rem 1rem;
+    width: 100%; }
+    .item .infoContainer div, .itemPromociones .infoContainer div {
+      flex-grow: 1; }
+    .item .infoContainer h2, .itemPromociones .infoContainer h2 {
+      color: #444242;
+      margin: 0; }
+    .item .infoContainer sup, .itemPromociones .infoContainer sup {
+      display: block; }
+    .item .infoContainer .precio, .itemPromociones .infoContainer .precio {
+      color: #ff4454;
+      font-weight: 600;
+      margin-bottom: 0; }
+      .item .infoContainer .precio small, .itemPromociones .infoContainer .precio small {
+        text-transform: uppercase; }
+
+#carruselHome {
+  background: #555;
+  height: 300px;
+  width: 100%; }
+
+#buscador {
+  background: linear-gradient(to right, #a02336 0%, #ff2335 100%);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.itemPromociones::after {
+  background-color: #ff4454;
+  content: "";
+  height: 3px;
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  transition: all 0.5s ease; }
+.itemPromociones:hover::after {
+  width: 100%; }
+.itemPromociones .infoContainer {
+  align-items: center; }
+  .itemPromociones .infoContainer div:first-child {
+    width: 60%; }
+  .itemPromociones .infoContainer div:last-child {
+    width: 40%; }
+  .itemPromociones .infoContainer h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem; }
+  .itemPromociones .infoContainer .button {
+    float: right; }
+  .itemPromociones .infoContainer .precio {
+    font-size: 30px; }
+    .itemPromociones .infoContainer .precio small {
+      font-size: 18px; }
+
+/*# sourceMappingURL=home.css.map */

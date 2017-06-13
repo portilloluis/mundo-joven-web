@@ -1,0 +1,185 @@
+@import "_variables"
+
+/**********GENERALES*************/
+html, body
+    color: $generalFontColor
+    font-family: $generalFont
+    font-size: $generalFontSize
+
+a 
+    transition: all .5s ease
+    &:hover, &:focus
+        text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+    font-family:  $generalFont
+    margin-top: 0
+
+main
+    .row
+        margin-bottom: $sectionSpace
+        margin-top: $sectionSpace
+
+.button
+    background-color: $red
+    border-radius: 24px
+    color: white
+    display: block
+    font-size: 20px
+    padding: 4px 20px
+    text-align: center
+    &:hover
+        background-color: $darkRed
+        color: white
+
+.button-blog
+    border: 1px solid white
+    border-radius: 0
+    color: white
+    padding: 6px 12px
+    text-transform: uppercase
+    &:hover
+        background-color: rgba(255,255,255,.4)
+        color: white
+
+.subtitle
+    font-weight: bold
+    text-align: center
+    h2
+        color: $generalFontColor
+        margin: 0
+    hr 
+        border-top: 2px solid $red
+        margin-bottom: 0
+        width: 15%
+    
+    @media screen and (min-width:768px)
+        h2
+            font-size: 2.8rem
+  
+
+/**********END - GENERALES*************/
+
+/**********HEADER*************/
+#headerPrincipal
+    font-family: $secundaryFont
+    background: $darkBlue
+    ul
+        list-style: none
+        margin: 24px 0 0 0
+        padding: 0
+        li
+            display: inline
+            margin: 0 0 0 20px
+            .btn, .btn i 
+                color: white
+                font-weight: bold
+
+            .redSocial
+                color: white
+                margin-right: 5px
+                &:hover
+                    color: $normalGrey
+    #logo
+        height: 85px
+        padding: 20px 0px 20px 11px
+        img 
+            width: 94%
+    #vista
+        color: white
+
+    .boton-blog
+        background-color: black
+        background-image: none
+        border: 1px solid $lightGrey
+        color: white
+        &:hover
+            background-color: rgba(255,255,255,0.2)
+            color: white
+
+    .telefon
+        color: $normalGrey
+        &:hover
+            color: white
+            text-decoration: none
+            transition: $transition
+/**********END - HEADER*************/
+
+/**********NAV*************/
+#navPrincipal
+    background: $darkBlue
+    border: none
+    border-radius: 0
+    font-family: $secundaryFont
+    font-weight: 400
+    margin-bottom: 0px
+    min-height: inherit
+    position: relative
+    text-transform: uppercase
+    ul
+        li
+            a
+                span.live
+                    color: $red
+                    transition: all .5s ease
+            &:hover,&:focus
+                span.live
+                    color: white
+    
+    #menu-menu-1
+        display: flex
+        justify-content: space-between
+        width: 100%
+
+    .navbar-default
+        border: none
+
+    .navbar-nav > li
+        a
+            color: #fff
+            padding: 10px 11px
+            text-align: left
+            &:hover
+                background-color: transparent
+                color: $red
+
+        a.btn-sucursales
+            border: 1px solid $red
+            color: $red
+            &:hover
+                background: $red
+                color: white
+/**********END - NAV*************/
+
+/**********FOOTER*************/
+#footerPrincipal
+    background: $darkBlue
+    color: $cream
+    font-family: $secundaryFont
+    padding: 50px 0
+    h4
+        color: white
+        font-family: $secundaryFont
+        font-weight: 300
+        text-transform: uppercase
+    .adress
+        font-weight: 300
+        font-size: 1.1em
+    .short-link
+        padding: 0
+        li 
+            display: inline-block
+            padding-left: 10px
+            padding-right: 10px
+            a
+                color: $red
+                &:hover
+                    color: $darkRed
+                    text-decoration: none
+    .small-hr
+        background: $cream
+        height: 1px
+        margin-bottom: 5px
+        text-align: center
+        width: 40%
+/**********END - FOOTER*************/

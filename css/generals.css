@@ -1,0 +1,263 @@
+/**********GENERALES*************/
+html, body
+{
+    font-family: 'Lato', sans-serif;
+}
+
+a:hover,
+a:focus {
+    color:transparent;
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Lato', sans-serif;
+}
+
+.btn {
+    border-radius: 0;
+    padding: 6px 12px;
+    text-transform: uppercase;
+}
+/**********END - GENERALES*************/
+
+/**********HEADER*************/
+#headerPrincipal 
+{
+    background: #00091e;
+}
+
+    #headerPrincipal ul
+    {
+        list-style: none;
+        margin: 24px 0 0 0;
+        padding: 0;
+    }
+
+        #headerPrincipal ul li {
+            display: inline;
+            margin: 0 0 0 20px;
+        }
+
+            #headerPrincipal ul li .btn,
+            #headerPrincipal ul li .btn i {
+                color: #fff;
+                font-weight: bold;
+            }
+
+             #headerPrincipal ul li .redSocial{
+                color:#fff;
+                margin-right: 5px;
+             }
+
+             #headerPrincipal ul li .redSocial:hover{
+                color:#ccc;
+             }
+
+    #headerPrincipal #logo
+    {
+        height: 85px;
+        padding: 20px 0px 20px 11px;
+    }
+
+        #headerPrincipal #logo img
+        {
+            width: 94%;
+        }
+
+    #headerPrincipal .boton-blog
+    {
+        background-color: #000;
+        background-image: none;
+        border:1px solid #ccc;        
+        color: #fff;
+    }
+
+    #headerPrincipal .boton-blog:hover
+    {
+        background-color: rgba(255,255,255,0.2);
+        color: #fff;
+    }
+
+    #headerPrincipal .telefon 
+    {
+        color: #888;
+    }
+
+    #headerPrincipal .telefon:hover
+    {
+         color:white;
+         text-decoration: none;
+    }
+
+/**********END - HEADER*************/
+        
+/**********NAV*************/
+
+#navPrincipal
+{
+    background: #0c1320;
+    border:none;
+    border-radius:0;
+    font-weight: 400;
+    margin-bottom: 0px;
+    min-height: inherit;
+    position: relative;
+    text-transform: uppercase;  
+}
+
+    #navPrincipal a.btn-sucursales
+    {
+        border: 1px solid #ff4454;
+        color: #ff4454 !important;
+    }
+
+    #navPrincipal a.btn-sucursales:hover
+    {
+        background: #ff4454 !important;
+        color: #fff !important;
+    }
+
+    #navPrincipal #menu-menu-1
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+        #navPrincipal a span.live
+        {
+            color:#ff2336
+        }
+
+       #navPrincipal ul li a:hover span.live,
+       #navPrincipal ul li a:focus span.live {
+            color: #fff;
+        }
+
+    #navPrincipal .navbar-default
+    {
+        border: none
+    }
+
+    #navPrincipal .navbar-nav > li a
+    {
+         color: #fff;
+         padding: 10px 11px;
+         text-align: left;
+    }
+
+    #navPrincipal .navbar-nav > li a:hover
+    {
+        background-color: transparent;
+        color: #ff2336;
+    }
+
+/**********END - NAV*************/
+
+
+       
+       
+        .bkgd-rosa {
+            background-color: #ff4454;
+        }
+
+        .bkgd-cream {
+            background-color: #f7f5f2;
+        }
+
+        .bkgd-black {
+            background-color: #00091e;
+        }
+
+        .bkgd-grey {
+            background-color: #e8e8e8;
+        }
+
+        .bkgd-white {
+            background-color: white;
+        }
+
+        .primary-background {
+            background: #ff4454;
+            color: #fff;
+        }
+
+        .primary-background h1::after {
+            background: #fff;
+        }
+
+        .primary-background h5 {
+            color: #fff;
+        }
+
+        .primary-color {
+            color: #ff4454;
+        }
+
+        .secondary-color {
+            color: #fff;
+        }
+
+        .rosa {
+            color: #ff4454;
+        }
+
+        .black,
+        a.black:focus {
+            color: #00091e;
+        }
+
+        a.black:hover {
+            color: #2f2f2f;
+            text-decoration: underline;
+        }
+
+/**********FOOTER*************/
+ #footerPrincipal 
+ {
+    padding: 50px 0px;
+    background: #00091e;
+    color: #f4f1e9;
+}
+
+        #footerPrincipal h4 {
+            color: white;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        #footerPrincipal .adress {
+            font-weight: 300;
+            font-size: 1.1em
+        }
+
+        #footerPrincipal .short-link {
+            padding: 0px;
+        }
+
+            #footerPrincipal .short-link a{
+                color: #ff2336;
+            }
+
+            #footerPrincipal .short-link a:hover
+            {
+                color: #d50012;
+                text-decoration: none;
+            }
+
+            #footerPrincipal .short-link li {
+                display: inline-block;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            
+        #footerPrincipal .small-hr {
+            width: 40%;
+            background: #f4f1e9;
+            height: 1px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+/**********END - FOOTER*************/

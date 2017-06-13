@@ -8,8 +8,12 @@
     <title>Mundo Joven - Bienvenido</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/owl-carousel.css">
+    <link rel="stylesheet" href="css/vendor/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
@@ -23,7 +27,7 @@
 
             <div class="col-xs-12 col-sm-8 text-right" id="hotel-info">
                 <ul class="hidden-xs">
-                    <li class="hidden-xs"><a class="btn boton-blog" href="http://elmochilero.mundojoven.com/?_ga=1.222280088.1812743090.1490210005" target="_blank">Blog Mundo joven</a></li>
+                    <li class="hidden-xs"><a class="button-blog" href="http://elmochilero.mundojoven.com/?_ga=1.222280088.1812743090.1490210005" target="_blank">Blog Mundo joven</a></li>
 
                     <li class="hidden-xs"><a class="redSocial" href="https://es-la.facebook.com/mundojoven" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
 
@@ -105,7 +109,7 @@
                     <li id="menu-item-34599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34599"><a title="Renta de Autos" href="http://www.rentalcars.com/?affiliateCode=mundojoven&amp;preflang=es">Renta de Autos</a></li>
                     <li id="menu-item-34192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34192"><a title="Live <span class=&quot;live&quot;>&amp;</span> Learn" target="_blank" href="http://www.liveandlearn.mx/">Live <span class="live">&</span> Learn</a></li>
 
-                    <li><a class="btn btn-sucursales padding-izq" href="http://mundojoven.com/sucursales/">Sucursales</a></li>
+                    <li><a class="btn-sucursales" href="http://mundojoven.com/sucursales/">Sucursales</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -116,7 +120,100 @@
 
     <!--/**********CONTENEDOR PRINCIPAL*************/-->
     <main>
-        
+        <section id="carruselHome"></section>
+        <div class="container">
+            <section id="buscador"></section>
+            <div class="row">
+                <div class="col-xs-12 subtitle">
+                    <h2>Promociones Para Viajar</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <section class="col-xs-12 owl-carousel owl-theme" id="promociones">
+                    <article class="itemPromociones">
+                        <figure>
+                            <img src="img/imgItem.jpg" alt="Imagen Item">
+                        </figure>
+                        <div class="infoContainer">
+                            <div>
+                                <h2>Madrid</h2>
+                                <sup>desde</sup>
+                                <p class="precio">1,956<small>mxn</small></p>
+                            </div>
+                            <div>
+                                <a href="#" class="button">Lo quiero</a>
+                            </div>
+                        </div>
+                    </article>
+               
+                    <article class="itemPromociones">
+                        <figure>
+                            <img src="img/imgItem.jpg" alt="Imagen Item">
+                        </figure>
+                        <div class="infoContainer">
+                            <div>
+                                <h2>Madrid</h2>
+                                <sup>desde</sup>
+                                <p class="precio">1,956<small>mxn</small></p>
+                            </div>
+                            <div>
+                                <a href="#" class="button">Lo quiero</a>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="itemPromociones">
+                        <figure>
+                            <img src="img/imgItem.jpg" alt="Imagen Item">
+                        </figure>
+                        <div class="infoContainer">
+                            <div>
+                                <h2>Madrid</h2>
+                                <sup>desde</sup>
+                                <p class="precio">1,956<small>mxn</small></p>
+                            </div>
+                            <div>
+                                <a href="#" class="button">Lo quiero</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="itemPromociones">
+                        <figure>
+                            <img src="img/imgItem.jpg" alt="Imagen Item">
+                        </figure>
+                        <div class="infoContainer">
+                            <div>
+                                <h2>Madrid</h2>
+                                <sup>desde</sup>
+                                <p class="precio">1,956<small>mxn</small></p>
+                            </div>
+                            <div>
+                                <a href="#" class="button">Lo quiero</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="itemPromociones">
+                        <figure>
+                            <img src="img/imgItem.jpg" alt="Imagen Item">
+                        </figure>
+                        <div class="infoContainer">
+                            <div>
+                                <h2>Madrid</h2>
+                                <sup>desde</sup>
+                                <p class="precio">1,956<small>mxn</small></p>
+                            </div>
+                            <div>
+                                <a href="#" class="button">Lo quiero</a>
+                            </div>
+                        </div>
+                    </article>
+            
+                </section>
+            </section>
+        </div>
     </main>
     <!--/**********END - CONTENEDOR PRINCIPAL*************/-->
 
@@ -164,7 +261,10 @@
         </div>
     </footer>
     <!--/**********END - FOOTER*************/-->
-    
+    <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/owl.carousel.js"></script>
+    <script src="js/vendor/owl.navigation.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>

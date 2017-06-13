@@ -1,0 +1,46 @@
+@import "_variables"
+
+#carruselHome
+    background: #555
+    height: 300px
+    width: 100%
+
+#buscador
+    background: $redGradient
+    box-shadow: $dropshadow
+    height: 50px
+    margin-top: 20px
+    margin-bottom: 20px
+
+.itemPromociones
+    @extend .item
+
+    &::after
+        background-color: $red
+        content: ""
+        height: 3px
+        position: absolute
+        width: 0
+        bottom: 0
+        transition: $transition
+    
+    &:hover::after
+        width: 100%
+        
+    .infoContainer
+        align-items: center
+
+        div:first-child
+            width: 60%
+        div:last-child
+            width: 40%
+        h2
+            font-size: 1.7rem
+            font-weight: bold
+            margin-bottom: .8rem
+        .button
+            float: right
+        .precio
+            font-size: 30px
+            small
+                font-size: 18px
