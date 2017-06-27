@@ -1,17 +1,335 @@
 @import "_variables"
 
 #carruselHome
-    background: #555
-    height: 300px
-    width: 100%
+    display: none
+    @media screen and (min-width:768px)
+        background: #555
+        display: block
+        height: 480px
+        width: 100%
 
 #buscador
-    background: $redGradient
-    box-shadow: $dropshadow
-    height: 50px
-    margin-top: 20px
-    margin-bottom: 20px
+    color: white
+    h2
+        color: white
+        border-bottom: 1px solid white
+        padding-bottom: 5px
+        font-size: 20px
+    h3
+        color: white
+    
+    .nav-tabs
+        display: flex
+        border: none
+        justify-content: space-between
+        border-top: 1px solid white
+        >li
+            margin-bottom: 0
+            flex-grow: 1
+            text-align: center
+            border-right: 1px solid white
+            &:last-child
+                border-right: none
 
+            >a
+                background: $darkBlue 
+                border: none
+                color: white
+                padding: 5px
+                font-size: 18px
+                margin: 0
+                border-radius: 0
+                &:hover
+                    color: rgba(255,255,255,.6)        
+
+        li.active
+            >a
+                background: $red
+                color: white
+                border: none 
+        span 
+            display: none
+        
+
+    .tab-content
+        background: $redGradient
+        box-shadow: $dropshadow
+        padding: 20px 15px 6px 15px
+        input
+            &::placeholder
+                color: $generalFontColor
+        #autos
+            .inputsection
+                margin-bottom: 10px
+
+        #paquetes
+            .filtrosContainer
+                align-items: baseline
+                display: flex
+                flex-direction: row
+                margin-top: 15px
+                p
+                    font-size: 14px
+                    margin-right: 10px
+            .inputsection
+                margin-bottom: 10px
+        #vuelos
+            #fechaVueloRegreso
+                opacity: 1
+                position: relative
+            .filtrosContainer
+                display: none
+                div
+                    display: inline-block
+            .inputsection
+                margin-bottom: 10px
+        .fechaContainer
+            color: $generalFontColor
+            display: flex
+            padding: 5px
+            padding-left: 30px
+            div
+                display: flex
+                flex-direction: row
+                font-size: 20px
+                width: 100px
+                line-height: 30px
+                margin-left: 3px
+                margin-top: 5px
+                p
+                    &:first-child
+                        margin-right: 5px
+            p  
+                margin: 0
+               
+            .numeroFecha
+                font-size: 40px
+                line-height: 40px
+        .filtrosContainer
+            color: white
+            display: flex
+            flex-direction: column
+                
+            div
+                display: flex
+                flex-direction: column
+                margin-right: 15px
+                margin-bottom: 10px
+
+                select, input
+                    background: white
+                    border: none
+                    border-radius: 5px
+                    box-shadow: $dropshadow
+                    color: $darkGrey
+                    font-size: 12px
+                    padding: 2px 5px
+
+            .aerolineaAdvance
+                &::placeholder
+                    color: $generalFontColor
+
+        .filtrosAvanzados
+            display: flex
+            justify-content: space-between
+            margin-top: 20px
+            flex-direction: column
+
+            .opcionesAvanzadas
+                a
+                    color: white
+                    display: block
+                    margin-bottom: 15px
+                    transition: $transition
+                    &:hover
+                        color: rgba(255,255,255,.5)
+                    .fa
+                        vertical-align: middle
+                        margin-left: 5px
+            
+        .inputsection
+            align-items: stretch
+            border-radius: 6px
+            box-shadow: $dropshadow
+            display: flex
+            flex-direction: column
+            position: relative
+                
+            div
+                background: white
+                border-bottom: 1px solid #727176
+                flex-grow: 1
+                position: relative
+                &:last-child
+                    border-bottom: 0
+            >div:first-child
+                border-radius: 5px 5px 0 0
+                input, select 
+                    border-radius: 5px 5px 0 0
+            >div:last-child
+                border-radius: 0 0 5px 5px
+                input
+                    border-radius: 0 0 5px 5px 
+            input, select
+                background: white
+                border: none
+                
+                color: $darkBlue
+                font-size: 20px
+                padding: 10px
+                padding-left: 30px
+                width: 100%
+
+            input:focus
+                outline: none
+
+            input[type=submit]
+                background: $blueGradient
+                color: white
+                font-size: 22px
+                padding-right: 25px
+                padding-left: 25px
+            
+            .submit
+                flex-grow: 1
+
+            .fa    
+                bottom: 0
+                border-top: 0
+                color: #727176
+                position: absolute
+                font-size: 20px
+                margin-left: 6px
+                top: 0
+                transform: translateY(30%)
+                z-index: 10
+                
+        .radiobuttons
+            display: flex
+            
+            label
+                margin-right: 25px
+
+            input
+                margin-right: 2px
+        .radio+.radio, .checkbox+.checkbox
+            margin-top: auto
+        .radio, .checkbox
+            margin-top: 0
+      
+        #formVueloArma,
+        #formVueloSencillo
+            display: none
+
+        #tooltipViajerosRedondo,
+        #tooltipViajerosSencillo,
+        #tooltipViajerosArma
+            display: none
+            >div
+                align-items: flex-end
+                border-bottom-color: $lightGrey
+                display: flex
+                justify-content: space-between
+                padding-bottom: 6px
+                padding-top: 6px
+                &:last-child
+                    justify-content: flex-end
+            p
+                font-size: 18px
+                margin-bottom: 0
+                width: 70%
+            
+            .buttonContainer
+                display: flex 
+                .controlPasajeros
+                    padding: 6px 12px
+                    background: white
+                    border: 1px solid $lightGrey
+                    transition: all .5s ease
+                    &:first-child
+                        border-radius: 5px 0 0 5px
+                    &:last-child
+                        border-radius: 0 5px 5px 0
+                    &:hover
+                        background: $lightGrey
+            .listo
+                border: none
+            .fa
+                font-size: 10px
+                position: relative
+                line-height: 0
+                margin: 0
+                
+    @media screen and (min-width:768px)
+        margin: 0 auto
+        margin-top: -150px
+        width: 750px
+        h2
+            display: none
+        
+        .nav-tabs
+            border-top: 0
+            justify-content: flex-start
+            >li
+                border-right: 0
+                margin-left: 2px
+                flex-grow: 0
+                >a
+                    border-radius: 7px 5px 0 0
+                    border: none
+                    color: white
+                    padding: 8px 15px
+            span 
+                display: inline
+            
+            .fa
+                margin-right: 10px
+                
+        .tab-content
+            border-radius: 0 8px 8px 8px
+            padding-bottom: 20px
+            #hoteles
+                .destino
+                    width: 60%
+
+            #seguros
+                .fecha
+                    width: 13%
+            .fechaContainer
+                div
+                    flex-direction: column
+                    font-size: 13px
+                    line-height: 15px
+            .inputsection
+                flex-direction: row
+                >div
+                    border-bottom: 0
+                    border-right: 1px solid #727176
+
+                >div:first-child
+                    border-radius: 5px 0 0 5px
+                    input, select
+                        border-radius: 5px 0 0 5px
+
+                >div:last-child
+                    border-right: 0
+                    border-radius: 0 5px 5px 0
+                    input
+                        border-radius: 0 5px 5px 0 
+
+            .filtrosAvanzados
+                flex-direction: row
+
+            .filtrosContainer
+                align-items: flex-end
+                flex-direction: row
+                div
+                    margin-right: 15px
+                    margin-bottom: 0
+
+    @media screen and (min-width: 1200px) 
+        width: 1170px
+    
 .itemPromociones
     @extend .item
 

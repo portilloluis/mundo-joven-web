@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="" >
     <title>Mundo Joven - Bienvenido</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap-material-design-mod.css">
     <link rel="stylesheet" href="css/vendor/owl-carousel.css">
     <link rel="stylesheet" href="css/vendor/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/general.css">
@@ -121,8 +122,510 @@
     <!--/**********CONTENEDOR PRINCIPAL*************/-->
     <main>
         <section id="carruselHome"></section>
+        
+        <section id="buscador">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#vuelos"><i class="fa fa-plane" aria-hidden="true"></i><span>Vuelos</span></a></li>
+                <li><a data-toggle="tab" href="#hoteles"><i class="fa fa-bed" aria-hidden="true"></i><span>Hoteles</span></a></li>
+                <li><a data-toggle="tab" href="#autos"><i class="fa fa-car" aria-hidden="true"></i> <span>Autos</span></a></li>
+                <li><a data-toggle="tab" href="#paquetes"><i class="fa fa-suitcase" aria-hidden="true"></i> <span>Paquetes</span></a></li>
+                <li><a data-toggle="tab" href="#seguros"><i class="fa fa-life-ring" aria-hidden="true"></i> <span>Seguros</span></a></li>
+            </ul>
+
+            <div class="tab-content">
+                <!--/***************VUELOS***************/-->
+                <div id="vuelos" class="tab-pane fade in active">
+                    <h2>Vuelos</h2>
+                    <div class="radiobuttons">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="tipoVuelo" value="redondo" checked id="radioVueloRedondo"><span class="circle"></span><span class="check"></span>
+                                Redondo
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="tipoVuelo" value="sencillo" id="radioVueloSencillo"><span class="circle"></span><span class="check"></span>
+                                Sencillo
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="tipoVuelo" value="armaRuta" id="radioVueloArma"><span class="circle"></span><span class="check"></span>
+                                Arma tu ruta
+                            </label>
+                        </div>
+                    </div>
+
+                    <form action="" id="formVueloRedondo" >
+                        <div class="inputsection">
+                            <div>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <input type="text" name="salidaVuelo" id="salidaVuelo" placeholder="Lugar de salida">
+                            </div>
+                            <div>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <input type="text" placeholder="Lugar de destino" name="destinoVuelo" id="destinoVuelo">
+                            </div>
+                            <div>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <input type="hidden" name="fechaVuelo" id="fechaVuelo">
+                                <div class="fechaContainer">
+                                    <p class="numeroFecha">99</p>
+                                    <div class="comboFecha">
+                                        <p class="diaFecha">Miércoles</p>
+                                        <p class="mesAniofecha"><span class="mes">Noviembre</span> <span>2017</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <input type="hidden" id="regresoVuelo">
+                                <div class="fechaContainer">
+                                    <p class="numeroFecha">99</p>
+                                    <div class="comboFecha">
+                                        <p class="diaFecha">Miércoles</p>
+                                        <p class="mesAniofecha"><span class="mes">Noviembre</span> <span>2017</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div id="tooltipViajerosRedondo" class="tooltipElement">
+                                    <div>
+                                        <p>2 Adultos</p>
+                                        <div class="buttonContainer">
+                                            <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                            <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p>2 Adultos</p>
+                                        <div class="buttonContainer">
+                                            <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                            <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p>2 Adultos</p>
+                                        <div class="buttonContainer">
+                                            <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                            <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="listo button">Listo</button>
+                                    </div>
+                                </div>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input type="text" placeholder="Viajeros" id="numeroViajerosRedondo" class="inputViajeros">
+                            </div>
+                            
+                            <div class="submit">
+                                <input type="submit" value="Buscar">
+                            </div>
+                        </div>
+                    </form>
+                    <form action="" id="formVueloSencillo">
+                        <div class="inputsection">
+                            <div>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <input type="text" name="salidaVuelo" id="salidaVuelo" placeholder="Lugar de salida">
+                            </div>
+                            <div>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <input type="text" placeholder="Lugar de destino" name="destinoVuelo" id="destinoVuelo">
+                            </div>
+                            <div>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <input type="hidden" name="fechaVuelo" id="fechaVuelo">
+                                <div class="fechaContainer">
+                                    <p class="numeroFecha">99</p>
+                                    <div class="comboFecha">
+                                        <p class="diaFecha">Miércoles</p>
+                                        <p class="mesAniofecha"><span class="mes">Noviembre</span> <span>2017</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div id="tooltipViajerosRedondo" class="tooltipElement">
+                                    <div>
+                                        <p>2 Adultos</p>
+                                        <div class="buttonContainer">
+                                            <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                            <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p>2 Adultos</p>
+                                        <div class="buttonContainer">
+                                            <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                            <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p>2 Adultos</p>
+                                        <div class="buttonContainer">
+                                            <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                            <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="listo button">Listo</button>
+                                    </div>
+                                </div>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input type="text" placeholder="Viajeros" id="numeroViajerosRedondo" class="inputViajeros">
+                            </div>
+                            
+                            <div class="submit">
+                                <input type="submit" value="Buscar">
+                            </div>
+                        </div>
+                    </form>
+                    <form action="" id="formVueloArma">
+                        <div class="inputsection">
+                            <div>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <input type="text" name="salidaVuelo" id="salidaVuelo" placeholder="Lugar de salida">
+                            </div>
+                            <div>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <input type="text" placeholder="Lugar de destino" name="destinoVuelo" id="destinoVuelo">
+                            </div>
+                            <div>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <input type="hidden" name="fechaVuelo" id="fechaVuelo">
+                                <div class="fechaContainer">
+                                    <p class="numeroFecha">99</p>
+                                    <div class="comboFecha">
+                                        <p class="diaFecha">Miércoles</p>
+                                        <p class="mesAniofecha"><span class="mes">Noviembre</span> <span>2017</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div id="tooltipViajerosRedondo" class="tooltipElement">
+                                    <div>
+                                        <p>2 Adultos</p>
+                                        <div class="buttonContainer">
+                                            <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                            <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p>2 Adultos</p>
+                                        <div class="buttonContainer">
+                                            <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                            <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <p>2 Adultos</p>
+                                        <div class="buttonContainer">
+                                            <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                            <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="listo button">Listo</button>
+                                    </div>
+                                </div>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <input type="text" placeholder="Viajeros" id="numeroViajerosRedondo" class="inputViajeros">
+                            </div>
+                        </div>
+                        <div class="inputsection">
+                            <div>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <input type="text" name="salidaVuelo" id="salidaVuelo" placeholder="Lugar de salida">
+                            </div>
+                            <div>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <input type="text" placeholder="Lugar de destino" name="destinoVuelo" id="destinoVuelo">
+                            </div>
+                            <div>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <input type="hidden" name="fechaVuelo" id="fechaVuelo">
+                                <div class="fechaContainer">
+                                    <p class="numeroFecha">99</p>
+                                    <div class="comboFecha">
+                                        <p class="diaFecha">Miércoles</p>
+                                        <p class="mesAniofecha"><span class="mes">Noviembre</span> <span>2017</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="submit">
+                                <input type="submit" value="Buscar">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="filtrosAvanzados">
+                        <div class="opcionesAvanzadas">
+                            <a href="" id="verOpciones">Opciones Avanzadas <i class="fa fa-sort-desc" aria-hidden="true"></i></a>
+                            <div class="filtrosContainer">
+                                <div>
+                                    <select name="escalas" id="escalas">
+                                        <option value="">Escalas</option>  
+                                        <option value="1">Directo</option>
+                                        <option value="2">Hasta 1</option> 
+                                        <option value="3">Hasta 2</option>
+                                        <option value="4">Hasta 3</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <select name="clase" id="clase">
+                                        <option value="">Clase</option>
+                                        <option value="1">Turista</option>
+                                        <option value="2">Económica</option>
+                                        <option value="3">Ejecutiva</option>
+                                        <option value="4">Primera Clase</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="Aerolínea" name="aerolinea" class="aerolineaAdvance">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="radiobuttons">
+                            <div>
+                                <input type="checkbox" name="tipoVuelo">
+                                <label for="tipoVuelo">Agregar un Hotel</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="tipoVuelo">
+                                <label for="tipoVuelo">Agregar un Auto</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--/***************END - VUELOS***************/-->
+
+                <!--/***************HOTELES***************/-->
+                <div id="hoteles" class="tab-pane fade">
+                    <h2>Hoteles</h2>
+                    <div class="inputsection">
+                        <div class="destino">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <input type="text" placeholder="Escribe tu destino. Ejemplo: Ciudad">
+                        </div>
+                        <div>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input type="text" placeholder="Entrada">
+                        </div>
+                        <div>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input type="text" placeholder="Salida">
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Buscar">
+                        </div>
+                    </div>
+                </div>
+                <!--/***************END - HOTELES***************/-->
+                
+                <!--/***************AUTOS***************/-->
+                <div id="autos" class="tab-pane fade">
+                    <h2>Autos</h2>
+                    <div class="radiobuttons">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="tipoPrestamo" value="redondo" checked id="radioVueloRedondo"><span class="circle"></span><span class="check"></span>
+                                Recoger
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="tipoPrestamo" value="redondo" id="radioVueloRedondo"><span class="circle"></span><span class="check"></span>
+                                Devolver
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="inputsection">
+                        <div>
+                            <select name="pais" id="paisAutos">
+                                <option value="">País</option>
+                                <option value="1">México</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="ciudad" id="ciudadAutos">
+                                <option value="">Ciudad</option>
+                                <option value="1">México</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="lugar" id="lugarAutos">
+                                <option value="">Lugar</option>
+                                <option value="1">México</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inputsection">
+                        <div>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input type="text" placeholder="Fecha de recogida" id="fechaRecogida" class="fechaRecogida">
+                        </div>
+                        <div>
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <input type="text" placeholder="Hora" id="horaRecogida" class="horaRecogida">
+                        </div>
+                        <div>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input type="text" placeholder="Fecha de devolución" id="fechaDevolucion" class="fechaDevolucion">
+                        </div>
+                        <div>
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <input type="text" placeholder="Hora" id="horaRecogida" class="horaRecogida">
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Buscar">
+                        </div>
+                    </div>
+                    <div class="filtrosAvanzados">                            
+                        <div class="radiobuttons">
+                            <input type="checkbox" name="edadConductor">
+                            <label for="edadConductor">Conductor de entre 25 y 70 años</label>
+                        </div>
+                    </div>
+                </div>
+                <!--/***************END - AUTOS***************/-->
+                
+                <!--/***************PAQUETES***************/-->
+                <div id="paquetes" class="tab-pane fade">
+                    <h2>Paquetes</h2>
+                    <div class="radiobuttons">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="tipoPaquete" value="redondo" id="radioVueloRedondo" checked><span class="circle"></span><span class="check"></span>
+                                Hotel + Vuelo
+                            </label>
+                        </div>
+                        
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="tipoPaquete" value="redondo" id="radioVueloRedondo"><span class="circle"></span><span class="check"></span>
+                                Hotel + Autobús
+                            </label>
+                        </div>
+                    
+                    </div>
+                    <div class="inputsection">
+                        <div>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <input type="text" placeholder="Origen" name="origenPaquetes" id="origenPaquetes">
+                        </div>
+                        <div>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <input type="text" placeholder="Lugar destino" name="destinoVuelo" id="destinoVuelo">
+                        </div>
+                        <div>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input type="text" placeholder="Fecha Salida" name="fechaVuelo" id="fechaVuelo">
+                        </div>
+                        <div>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input type="text" placeholder="Fecha Salida" name="fechaVuelo" id="fechaVuelo">
+                        </div>
+                    </div>
+
+                    <div class="inputsection">
+                        <div>
+                            <select name="habitaciones" id="habitacionesPaquetes">
+                                <option value="">Habitaciones</option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="adultos" id="adultosPaquetes">
+                                <option value="">Adultos</option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="menores" id="menoresPaquetes">
+                                <option value="">Menores</option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Buscar">
+                        </div>
+                    </div>
+
+                    <div class="filtrosContainer">
+                        <p>Edad Menores:</p>
+                        <div>
+                            <select name="edad1" id="edad1Paquetes">
+                                <option value="">---</option>  
+                                <option value="1">1</option>
+                                <option value="2">2</option> 
+                            </select>
+                        </div>
+                        <div>
+                            <select name="edad2" id="edad2Paquetes">
+                                <option value="">---</option>  
+                                <option value="1">1</option>
+                                <option value="2">2</option> 
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!--/***************END - PAQUETES***************/-->
+
+                <!--/***************SEGUROS***************/-->
+                <div id="seguros" class="tab-pane fade">
+                    <h2>Seguros</h2>
+                    <div class="inputsection">
+                        <div class="fecha">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input type="text" placeholder="Ida" name="ida" id="idaSeguros">
+                        </div>
+                        <div class="fecha">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input type="text" placeholder="Regreso" name="regreso" id="regresoSeguros">
+                        </div>
+                        <div>
+                            <i class="fa fa-sun-o" aria-hidden="true"></i>
+                            <select name="diasViaje" id="diasViajeSeguros">
+                                <option value="">Días de viaje</option>  
+                                <option value="1">1</option>
+                                <option value="2">2</option> 
+                            </select>
+                        </div>
+                        <div>
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <input type="text" placeholder="Email" name="email" id="emailSeguros">
+                        </div>
+                        <div>
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <select name="pasajeros" id="pasajerosSeguros">
+                                <option value="">Pasajeros</option>  
+                                <option value="1">1</option>
+                                <option value="2">2</option> 
+                            </select>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Buscar">
+                        </div>
+                    </div>
+                </div>
+                <!--/***************SEGUROS***************/-->
+            </div>
+            
+
+        </section>
         <div class="container">
-            <section id="buscador"></section>
             <div class="row">
                 <div class="col-xs-12 subtitle">
                     <h2>Promociones Para Viajar</h2>
@@ -262,6 +765,7 @@
     </footer>
     <!--/**********END - FOOTER*************/-->
     <script src="js/vendor/jquery.min.js"></script>
+    
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/owl.carousel.js"></script>
     <script src="js/vendor/owl.navigation.js"></script>

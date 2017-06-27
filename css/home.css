@@ -36,16 +36,311 @@
         text-transform: uppercase; }
 
 #carruselHome {
-  background: #555;
-  height: 300px;
-  width: 100%; }
+  display: none; }
+  @media screen and (min-width: 768px) {
+    #carruselHome {
+      background: #555;
+      display: block;
+      height: 480px;
+      width: 100%; } }
 
 #buscador {
-  background: linear-gradient(to right, #a02336 0%, #ff2335 100%);
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-  height: 50px;
-  margin-top: 20px;
-  margin-bottom: 20px; }
+  color: white; }
+  #buscador h2 {
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    font-size: 20px; }
+  #buscador h3 {
+    color: white; }
+  #buscador .nav-tabs {
+    display: flex;
+    border: none;
+    justify-content: space-between;
+    border-top: 1px solid white; }
+    #buscador .nav-tabs > li {
+      margin-bottom: 0;
+      flex-grow: 1;
+      text-align: center;
+      border-right: 1px solid white; }
+      #buscador .nav-tabs > li:last-child {
+        border-right: none; }
+      #buscador .nav-tabs > li > a {
+        background: #00091e;
+        border: none;
+        color: white;
+        padding: 5px;
+        font-size: 18px;
+        margin: 0;
+        border-radius: 0; }
+        #buscador .nav-tabs > li > a:hover {
+          color: rgba(255, 255, 255, 0.6); }
+    #buscador .nav-tabs li.active > a {
+      background: #ff4454;
+      color: white;
+      border: none; }
+    #buscador .nav-tabs span {
+      display: none; }
+  #buscador .tab-content {
+    background: linear-gradient(to right, #a02336 0%, #ff2335 100%);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+    padding: 20px 15px 6px 15px; }
+    #buscador .tab-content input::placeholder {
+      color: #444242; }
+    #buscador .tab-content #autos .inputsection {
+      margin-bottom: 10px; }
+    #buscador .tab-content #paquetes .filtrosContainer {
+      align-items: baseline;
+      display: flex;
+      flex-direction: row;
+      margin-top: 15px; }
+      #buscador .tab-content #paquetes .filtrosContainer p {
+        font-size: 14px;
+        margin-right: 10px; }
+    #buscador .tab-content #paquetes .inputsection {
+      margin-bottom: 10px; }
+    #buscador .tab-content #vuelos #fechaVueloRegreso {
+      opacity: 1;
+      position: relative; }
+    #buscador .tab-content #vuelos .filtrosContainer {
+      display: none; }
+      #buscador .tab-content #vuelos .filtrosContainer div {
+        display: inline-block; }
+    #buscador .tab-content #vuelos .inputsection {
+      margin-bottom: 10px; }
+    #buscador .tab-content .fechaContainer {
+      color: #444242;
+      display: flex;
+      padding: 5px;
+      padding-left: 30px; }
+      #buscador .tab-content .fechaContainer div {
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        width: 100px;
+        line-height: 30px;
+        margin-left: 3px;
+        margin-top: 5px; }
+        #buscador .tab-content .fechaContainer div p:first-child {
+          margin-right: 5px; }
+      #buscador .tab-content .fechaContainer p {
+        margin: 0; }
+      #buscador .tab-content .fechaContainer .numeroFecha {
+        font-size: 40px;
+        line-height: 40px; }
+    #buscador .tab-content .filtrosContainer {
+      color: white;
+      display: flex;
+      flex-direction: column; }
+      #buscador .tab-content .filtrosContainer div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 15px;
+        margin-bottom: 10px; }
+        #buscador .tab-content .filtrosContainer div select, #buscador .tab-content .filtrosContainer div input {
+          background: white;
+          border: none;
+          border-radius: 5px;
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+          color: #2f2f2f;
+          font-size: 12px;
+          padding: 2px 5px; }
+      #buscador .tab-content .filtrosContainer .aerolineaAdvance::placeholder {
+        color: #444242; }
+    #buscador .tab-content .filtrosAvanzados {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      flex-direction: column; }
+      #buscador .tab-content .filtrosAvanzados .opcionesAvanzadas a {
+        color: white;
+        display: block;
+        margin-bottom: 15px;
+        transition: all 0.5s ease; }
+        #buscador .tab-content .filtrosAvanzados .opcionesAvanzadas a:hover {
+          color: rgba(255, 255, 255, 0.5); }
+        #buscador .tab-content .filtrosAvanzados .opcionesAvanzadas a .fa {
+          vertical-align: middle;
+          margin-left: 5px; }
+    #buscador .tab-content .inputsection {
+      align-items: stretch;
+      border-radius: 6px;
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      position: relative; }
+      #buscador .tab-content .inputsection div {
+        background: white;
+        border-bottom: 1px solid #727176;
+        flex-grow: 1;
+        position: relative; }
+        #buscador .tab-content .inputsection div:last-child {
+          border-bottom: 0; }
+      #buscador .tab-content .inputsection > div:first-child {
+        border-radius: 5px 5px 0 0; }
+        #buscador .tab-content .inputsection > div:first-child input, #buscador .tab-content .inputsection > div:first-child select {
+          border-radius: 5px 5px 0 0; }
+      #buscador .tab-content .inputsection > div:last-child {
+        border-radius: 0 0 5px 5px; }
+        #buscador .tab-content .inputsection > div:last-child input {
+          border-radius: 0 0 5px 5px; }
+      #buscador .tab-content .inputsection input, #buscador .tab-content .inputsection select {
+        background: white;
+        border: none;
+        color: #00091e;
+        font-size: 20px;
+        padding: 10px;
+        padding-left: 30px;
+        width: 100%; }
+      #buscador .tab-content .inputsection input:focus {
+        outline: none; }
+      #buscador .tab-content .inputsection input[type=submit] {
+        background: linear-gradient(to right, #000941 0%, #00091e 100%);
+        color: white;
+        font-size: 22px;
+        padding-right: 25px;
+        padding-left: 25px; }
+      #buscador .tab-content .inputsection .submit {
+        flex-grow: 1; }
+      #buscador .tab-content .inputsection .fa {
+        bottom: 0;
+        border-top: 0;
+        color: #727176;
+        position: absolute;
+        font-size: 20px;
+        margin-left: 6px;
+        top: 0;
+        transform: translateY(30%);
+        z-index: 10; }
+    #buscador .tab-content .radiobuttons {
+      display: flex; }
+      #buscador .tab-content .radiobuttons label {
+        margin-right: 25px; }
+      #buscador .tab-content .radiobuttons input {
+        margin-right: 2px; }
+    #buscador .tab-content .radio + .radio, #buscador .tab-content .checkbox + .checkbox {
+      margin-top: auto; }
+    #buscador .tab-content .radio, #buscador .tab-content .checkbox {
+      margin-top: 0; }
+    #buscador .tab-content #formVueloArma,
+    #buscador .tab-content #formVueloSencillo {
+      display: none; }
+    #buscador .tab-content #tooltipViajerosRedondo,
+    #buscador .tab-content #tooltipViajerosSencillo,
+    #buscador .tab-content #tooltipViajerosArma {
+      display: none; }
+      #buscador .tab-content #tooltipViajerosRedondo > div,
+      #buscador .tab-content #tooltipViajerosSencillo > div,
+      #buscador .tab-content #tooltipViajerosArma > div {
+        align-items: flex-end;
+        border-bottom-color: #cccccc;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 6px;
+        padding-top: 6px; }
+        #buscador .tab-content #tooltipViajerosRedondo > div:last-child,
+        #buscador .tab-content #tooltipViajerosSencillo > div:last-child,
+        #buscador .tab-content #tooltipViajerosArma > div:last-child {
+          justify-content: flex-end; }
+      #buscador .tab-content #tooltipViajerosRedondo p,
+      #buscador .tab-content #tooltipViajerosSencillo p,
+      #buscador .tab-content #tooltipViajerosArma p {
+        font-size: 18px;
+        margin-bottom: 0;
+        width: 70%; }
+      #buscador .tab-content #tooltipViajerosRedondo .buttonContainer,
+      #buscador .tab-content #tooltipViajerosSencillo .buttonContainer,
+      #buscador .tab-content #tooltipViajerosArma .buttonContainer {
+        display: flex; }
+        #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros,
+        #buscador .tab-content #tooltipViajerosSencillo .buttonContainer .controlPasajeros,
+        #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros {
+          padding: 6px 12px;
+          background: white;
+          border: 1px solid #cccccc;
+          transition: all 0.5s ease; }
+          #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros:first-child,
+          #buscador .tab-content #tooltipViajerosSencillo .buttonContainer .controlPasajeros:first-child,
+          #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros:first-child {
+            border-radius: 5px 0 0 5px; }
+          #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros:last-child,
+          #buscador .tab-content #tooltipViajerosSencillo .buttonContainer .controlPasajeros:last-child,
+          #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros:last-child {
+            border-radius: 0 5px 5px 0; }
+          #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros:hover,
+          #buscador .tab-content #tooltipViajerosSencillo .buttonContainer .controlPasajeros:hover,
+          #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros:hover {
+            background: #cccccc; }
+      #buscador .tab-content #tooltipViajerosRedondo .listo,
+      #buscador .tab-content #tooltipViajerosSencillo .listo,
+      #buscador .tab-content #tooltipViajerosArma .listo {
+        border: none; }
+      #buscador .tab-content #tooltipViajerosRedondo .fa,
+      #buscador .tab-content #tooltipViajerosSencillo .fa,
+      #buscador .tab-content #tooltipViajerosArma .fa {
+        font-size: 10px;
+        position: relative;
+        line-height: 0;
+        margin: 0; }
+  @media screen and (min-width: 768px) {
+    #buscador {
+      margin: 0 auto;
+      margin-top: -150px;
+      width: 750px; }
+      #buscador h2 {
+        display: none; }
+      #buscador .nav-tabs {
+        border-top: 0;
+        justify-content: flex-start; }
+        #buscador .nav-tabs > li {
+          border-right: 0;
+          margin-left: 2px;
+          flex-grow: 0; }
+          #buscador .nav-tabs > li > a {
+            border-radius: 7px 5px 0 0;
+            border: none;
+            color: white;
+            padding: 8px 15px; }
+        #buscador .nav-tabs span {
+          display: inline; }
+        #buscador .nav-tabs .fa {
+          margin-right: 10px; }
+      #buscador .tab-content {
+        border-radius: 0 8px 8px 8px;
+        padding-bottom: 20px; }
+        #buscador .tab-content #hoteles .destino {
+          width: 60%; }
+        #buscador .tab-content #seguros .fecha {
+          width: 13%; }
+        #buscador .tab-content .fechaContainer div {
+          flex-direction: column;
+          font-size: 13px;
+          line-height: 15px; }
+        #buscador .tab-content .inputsection {
+          flex-direction: row; }
+          #buscador .tab-content .inputsection > div {
+            border-bottom: 0;
+            border-right: 1px solid #727176; }
+          #buscador .tab-content .inputsection > div:first-child {
+            border-radius: 5px 0 0 5px; }
+            #buscador .tab-content .inputsection > div:first-child input, #buscador .tab-content .inputsection > div:first-child select {
+              border-radius: 5px 0 0 5px; }
+          #buscador .tab-content .inputsection > div:last-child {
+            border-right: 0;
+            border-radius: 0 5px 5px 0; }
+            #buscador .tab-content .inputsection > div:last-child input {
+              border-radius: 0 5px 5px 0; }
+        #buscador .tab-content .filtrosAvanzados {
+          flex-direction: row; }
+        #buscador .tab-content .filtrosContainer {
+          align-items: flex-end;
+          flex-direction: row; }
+          #buscador .tab-content .filtrosContainer div {
+            margin-right: 15px;
+            margin-bottom: 0; } }
+  @media screen and (min-width: 1200px) {
+    #buscador {
+      width: 1170px; } }
 
 .itemPromociones::after {
   background-color: #ff4454;
