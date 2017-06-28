@@ -26,30 +26,27 @@ $(document).ready(function(){
         $(this).parent().parent().slideUp(300)
     })
 
+    //Cambia el formulario en el tabs de vuelos, dependiendo si eligen sencillo, redondo y arma tu paquete
     $("#radioVueloRedondo").click(function () {
-        $("#formVueloRedondo").slideDown( 300 , function (){
-            $("#formVueloSencillo").slideUp(100)
-            $("#formVueloArma").slideUp(100)
-        })
-        
-        
+        $("#formVueloSencillo, #formVueloArma").css({"position": "absolute"}).fadeOut(300)
+        $("#formVueloRedondo").fadeIn().css({"position": "relative"})
+         
     })
 
     $("#radioVueloSencillo").click(function () {
-        $("#formVueloSencillo").slideDown( 300 , function () {
-            $("#formVueloRedondo").slideUp(100)
-            $("#formVueloArma").slideUp(100)
-        })
-        
+        $("#formVueloRedondo, #formVueloArma").css({"position": "absolute"}).fadeOut(300)
+        $("#formVueloSencillo").fadeIn().css({"position": "relative"})
         
     })
 
     $("#radioVueloArma").click( function () {
-        $("#formVueloArma").slideDown( 300 , function () {
-            $("#formVueloSencillo").slideUp(100)
-            $("#formVueloRedondo").slideUp(100)
-        })
-        
-        
+        $("#formVueloSencillo, #formVueloRedondo").css({"position": "absolute"}).fadeOut(300)
+        $("#formVueloArma").fadeIn().css({"position": "relative"})
     })
+
+    //Acrtiva o desactiva el cuadro de edad de conductor en el tab de auto
+
+   $("#checkBoxEdadConductor").click(function(){
+       $("#conductorEdad").toggle("slow")
+   })
 });

@@ -35,6 +35,7 @@
       .item .infoContainer .precio small, .itemPromociones .infoContainer .precio small {
         text-transform: uppercase; }
 
+/*************CARRUSEL HOME************ */
 #carruselHome {
   display: none; }
   @media screen and (min-width: 768px) {
@@ -44,8 +45,16 @@
       height: 480px;
       width: 100%; } }
 
+/*************END - CARRUSEL HOME************ */
+/*************BUSCADOR************ */
 #buscador {
-  color: white; }
+  /*************GENERALES************ */
+  color: white;
+  /*************END - GENERALES************ */
+  /*************TABS DE NAVEGACION************ */
+  /*************END - TABS DE NAVEGACION************ */
+  /*************CONTENIDO TABS************ */
+  /*************END - CONTENIDO TABS************ */ }
   #buscador h2 {
     color: white;
     border-bottom: 1px solid white;
@@ -89,6 +98,15 @@
       color: #444242; }
     #buscador .tab-content #autos .inputsection {
       margin-bottom: 10px; }
+    #buscador .tab-content #autos .filtrosAvanzados {
+      align-items: center;
+      justify-content: flex-start; }
+      #buscador .tab-content #autos .filtrosAvanzados #conductorEdad {
+        display: none; }
+        #buscador .tab-content #autos .filtrosAvanzados #conductorEdad input {
+          background: transparent;
+          border: 0;
+          border-bottom: 1px solid white; }
     #buscador .tab-content #paquetes .filtrosContainer {
       align-items: baseline;
       display: flex;
@@ -109,10 +127,11 @@
     #buscador .tab-content #vuelos .inputsection {
       margin-bottom: 10px; }
     #buscador .tab-content .fechaContainer {
+      border-radius: 5px;
       color: #444242;
       display: flex;
       padding: 5px;
-      padding-left: 30px; }
+      padding-left: 35px; }
       #buscador .tab-content .fechaContainer div {
         display: flex;
         flex-direction: row;
@@ -138,13 +157,12 @@
         margin-right: 15px;
         margin-bottom: 10px; }
         #buscador .tab-content .filtrosContainer div select, #buscador .tab-content .filtrosContainer div input {
-          background: white;
+          background: transparent;
           border: none;
-          border-radius: 5px;
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-          color: #2f2f2f;
+          color: white;
           font-size: 12px;
-          padding: 2px 5px; }
+          padding: 2px 5px;
+          border-bottom: 1px solid; }
       #buscador .tab-content .filtrosContainer .aerolineaAdvance::placeholder {
         color: #444242; }
     #buscador .tab-content .filtrosAvanzados {
@@ -161,7 +179,12 @@
           color: rgba(255, 255, 255, 0.5); }
         #buscador .tab-content .filtrosAvanzados .opcionesAvanzadas a .fa {
           vertical-align: middle;
-          margin-left: 5px; }
+          margin-left: 5px;
+          margin-right: 5px; }
+      #buscador .tab-content .filtrosAvanzados .opcionesAvanzadas input::placeholder {
+        color: white; }
+      #buscador .tab-content .filtrosAvanzados .opcionesAvanzadas select option {
+        color: white; }
     #buscador .tab-content .inputsection {
       align-items: stretch;
       border-radius: 6px;
@@ -172,6 +195,7 @@
       #buscador .tab-content .inputsection div {
         background: white;
         border-bottom: 1px solid #727176;
+        display: flex;
         flex-grow: 1;
         position: relative; }
         #buscador .tab-content .inputsection div:last-child {
@@ -188,10 +212,15 @@
         background: white;
         border: none;
         color: #00091e;
-        font-size: 20px;
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: 300;
         padding: 10px;
-        padding-left: 30px;
-        width: 100%; }
+        padding-left: 33px;
+        width: 100%;
+        font-style: normal; }
+      #buscador .tab-content .inputsection select {
+        width: 98%; }
       #buscador .tab-content .inputsection input:focus {
         outline: none; }
       #buscador .tab-content .inputsection input[type=submit] {
@@ -208,7 +237,8 @@
         color: #727176;
         position: absolute;
         font-size: 20px;
-        margin-left: 6px;
+        margin-left: 10px;
+        margin-right: 5px;
         top: 0;
         transform: translateY(30%);
         z-index: 10; }
@@ -222,6 +252,8 @@
       margin-top: auto; }
     #buscador .tab-content .radio, #buscador .tab-content .checkbox {
       margin-top: 0; }
+    #buscador .tab-content .tab-pane {
+      position: relative; }
     #buscador .tab-content #formVueloArma,
     #buscador .tab-content #formVueloSencillo {
       display: none; }
@@ -255,7 +287,7 @@
         #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros,
         #buscador .tab-content #tooltipViajerosSencillo .buttonContainer .controlPasajeros,
         #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros {
-          padding: 6px 12px;
+          padding: 14px 16px;
           background: white;
           border: 1px solid #cccccc;
           transition: all 0.5s ease; }
@@ -282,6 +314,15 @@
         position: relative;
         line-height: 0;
         margin: 0; }
+      @media screen and (min-width: 768px) {
+        #buscador .tab-content #tooltipViajerosRedondo,
+        #buscador .tab-content #tooltipViajerosSencillo,
+        #buscador .tab-content #tooltipViajerosArma {
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5); }
+          #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros,
+          #buscador .tab-content #tooltipViajerosSencillo .buttonContainer .controlPasajeros,
+          #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros {
+            padding: 6px 12px; } }
   @media screen and (min-width: 768px) {
     #buscador {
       margin: 0 auto;
@@ -311,7 +352,7 @@
         #buscador .tab-content #hoteles .destino {
           width: 60%; }
         #buscador .tab-content #seguros .fecha {
-          width: 13%; }
+          width: 17%; }
         #buscador .tab-content .fechaContainer div {
           flex-direction: column;
           font-size: 13px;
