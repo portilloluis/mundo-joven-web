@@ -7,6 +7,13 @@ $(document).ready(function(){
         filtrosContainer.toggle(500)
     })
 
+    //Activa carrusel principal
+    $('#carruselHome').owlCarousel({
+        items: 1,
+        loop: true,
+        lazyLoad: true
+    });
+
     //Activa carrusel de promociones 
     $('#promociones').owlCarousel({
         items: 3,
@@ -49,4 +56,6 @@ $(document).ready(function(){
    $("#checkBoxEdadConductor").click(function(){
        $("#conductorEdad").toggle("slow")
    })
+
+
 });
