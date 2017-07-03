@@ -112,17 +112,19 @@ input::placeholder {
   width: 100%;
   z-index: 30; }
   @media screen and (min-width: 768px) {
-    .tooltipElement:before {
-      content: "";
-      border-bottom: 10px solid white;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      height: 0;
-      position: absolute;
-      right: 30px;
-      top: -10px;
-      width: 0;
-      z-index: 400; } }
+    .tooltipElement {
+      top: 70px; }
+      .tooltipElement:before {
+        content: "";
+        border-bottom: 10px solid white;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        height: 0;
+        position: absolute;
+        right: 30px;
+        top: -10px;
+        width: 0;
+        z-index: 400; } }
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {

@@ -124,13 +124,6 @@
         <section id="carruselHome" class="owl-carousel owl-theme">
             <div class="itemCarrusel" style="background-image:url(img/area-segura-home.jpg)">
                 <div class="textContainer">
-                    <h2>Vuelos a europa a los mejores precios</h2>
-                    <p>Madrid <em>desde</em> $18,550 MXN</p>
-                    <button class="button loQuiero">Lo quiero</button>
-                </div>
-            </div>
-            <div class="itemCarrusel" style="background-image:url(img/area-segura-home.jpg)">
-                <div class="textContainer">
                     <h2>Vuelos a Acapulco a los mejores precios</h2>
                     <p>Madrid <em>desde</em> $18,550 MXN</p>
                     <button class="button loQuiero">Lo quiero</button>
@@ -138,8 +131,15 @@
             </div>
             <div class="itemCarrusel" style="background-image:url(img/area-segura-home.jpg)">
                 <div class="textContainer">
+                    <h2>Vuelos a Acapulco a los mejores precios</h2>
+                    <p>Madrid <em>desde</em> <strong>$18,550 MXN</strong></p>
+                    <button class="button loQuiero">Lo quiero</button>
+                </div>
+            </div>
+            <div class="itemCarrusel" style="background-image:url(img/area-segura-home.jpg)">   
+                <div class="textContainer">
                     <h2>Vuelos a Toluca a los mejores precios</h2>
-                    <p>Madrid <em>desde</em> $18,550 MXN</p>
+                    <p>Madrid <em>desde</em> <strong>$18,550 MXN</strong></p>
                     <button class="button loQuiero">Lo quiero</button>
                 </div>
             </div>
@@ -147,16 +147,16 @@
         
         <section id="buscador">
             <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#vuelos"><i class="fa fa-plane" aria-hidden="true"></i><span>Vuelos</span></a></li>
+                <li><a data-toggle="tab" href="#vuelos"><i class="fa fa-plane" aria-hidden="true"></i><span>Vuelos</span></a></li>
                 <li><a data-toggle="tab" href="#hoteles"><i class="fa fa-bed" aria-hidden="true"></i><span>Hoteles</span></a></li>
                 <li><a data-toggle="tab" href="#autos"><i class="fa fa-car" aria-hidden="true"></i> <span>Autos</span></a></li>
-                <li><a data-toggle="tab" href="#paquetes"><i class="fa fa-suitcase" aria-hidden="true"></i> <span>Paquetes</span></a></li>
+                <li class="active"><a data-toggle="tab" href="#paquetes"><i class="fa fa-suitcase" aria-hidden="true"></i> <span>Paquetes</span></a></li>
                 <li><a data-toggle="tab" href="#seguros"><i class="fa fa-life-ring" aria-hidden="true"></i> <span>Seguros</span></a></li>
             </ul>
 
             <div class="tab-content">
                 <!--/***************VUELOS***************/-->
-                <div id="vuelos" class="tab-pane fade in active">
+                <div id="vuelos" class="tab-pane fade">
                     <h2>Vuelos</h2>
                     <div class="radiobuttons">
                         <div class="radio">
@@ -182,12 +182,24 @@
                     <form action="" id="formVueloRedondo" >
                         <div class="inputsection">
                             <div>
+                                <div class="tooltipElement tooltipLugares">
+                                    <ul class="principal">
+                                        <li>Aeropuerto International Sangster, Montego Bay, <strong>Jama</strong>ica(MBJ)
+                                            <ul class="secundario">
+                                                <li>Lorem ipsum dolor sit amet,                                                         consectetur</li>
+                                                <li>Lorem ipsum dolor sit amet,                                                         consectetur</li>
+                                                <li>Lorem ipsum dolor sit amet,                                                         consectetur</li>
+                                            </ul>
+                                        </li>
+                                        <li>Aeropuerto International Sangster, Montego Bay, <strong>Jama</strong>ica(MBJ)</li>
+                                    </ul>
+                                </div>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input type="text" name="salidaVuelo" id="salidaVuelo" placeholder="Lugar de salida">
+                                <input type="text" name="salidaVuelo" id="salidaVueloRedondo" placeholder="Lugar de salida" class="inputLugares">
                             </div>
                             <div>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input type="text" placeholder="Lugar de destino" name="destinoVuelo" id="destinoVuelo">
+                                <input type="text" placeholder="Lugar de destino" name="destinoVuelo" id="destinoVueloRedondo">
                             </div>
                             <div>
                                 <i class="fa fa-calendar-o" aria-hidden="true"></i>
@@ -211,7 +223,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="switchPosition">
+                            <div>
                                 <div id="tooltipViajerosRedondo" class="tooltipElement">
                                     <div>
                                         <p><span class="numeroAdulos">2</span> Adultos</p>
@@ -245,11 +257,11 @@
                         <div class="inputsection">
                             <div>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input type="text" name="salidaVuelo" id="salidaVuelo" placeholder="Lugar de salida">
+                                <input type="text" name="salidaVuelo" id="salidaVueloSencillo" placeholder="Lugar de salida">
                             </div>
                             <div>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input type="text" placeholder="Lugar de destino" name="destinoVuelo" id="destinoVuelo">
+                                <input type="text" placeholder="Lugar de destino" name="destinoVuelo" id="destinoVueloSencillo">
                             </div>
                             <div>
                                 <i class="fa fa-calendar-o" aria-hidden="true"></i>
@@ -263,7 +275,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div id="tooltipViajerosRedondo" class="tooltipElement">
+                                <div id="tooltipViajeroSencillo" class="tooltipElement">
                                     <div>
                                         <p><span class="numeroAdulos">2</span> Adultos</p>
                                         <div class="buttonContainer">
@@ -296,15 +308,15 @@
                         <div class="inputsection">
                             <div>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input type="text" name="salidaVuelo" id="salidaVuelo" placeholder="Lugar de salida">
+                                <input type="text" name="salidaVuelo" id="salidaVueloArma" placeholder="Lugar de salida">
                             </div>
                             <div>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <input type="text" placeholder="Lugar de destino" name="destinoVuelo" id="destinoVuelo">
+                                <input type="text" placeholder="Lugar de destino" name="destinoVuelo" id="destinoVueloArma">
                             </div>
                             <div>
                                 <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                                <input type="hidden" name="fechaVuelo" id="fechaVuelo">
+                                <input type="hidden" name="fechaVuelo" id="fechaVu4elo">
                                 <div class="fechaContainer">
                                     <p class="numeroFecha">99</p>
                                     <div class="comboFecha">
@@ -314,7 +326,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div id="tooltipViajerosRedondo" class="tooltipElement">
+                                <div id="tooltipViajerosArma" class="tooltipElement">
                                     <div>
                                         <p><span class="numeroAdulos">2</span> Adultos</p>
                                         <div class="buttonContainer">
@@ -535,7 +547,7 @@
                 <!--/***************END - AUTOS***************/-->
                 
                 <!--/***************PAQUETES***************/-->
-                <div id="paquetes" class="tab-pane fade">
+                <div id="paquetes" class="tab-pane fade in active">
                     <h2>Paquetes</h2>
                     <div class="radiobuttons">
                         <div class="radio">
@@ -584,52 +596,84 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="inputsection">
                         <div>
+                            <div class="tooltipElement tooltipHabitaciones">
+                                <div class="numeroHabitaciones">
+                                    <p># Habitaciones:</p>
+                                    <select name="" id="">
+                                        <option value="">--</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                <div class="huespedesContainer">
+                                    <div class="habitacion">
+                                        <div class="personasHabitaciones">
+                                            <p class="numeroHabitacion">1</p>
+                                            <select name="" class="adultosHabitacion">
+                                                <option value="">Adultos</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                            <select name="" class="menoresHabitacion">
+                                                <option value="">Menores</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                        <div class="edadMenores">
+                                            <p>Edad menores</p>
+                                            <select name="">
+                                                <option value=""> -- </option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                            </select>
+                                            <select name="">
+                                                <option value=""> -- </option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                            </select>
+                                        </div> 
+                                    </div>
+                                    <div class="habitacion">
+                                        <div class="personasHabitaciones">
+                                            <p class="numeroHabitacion">1</p>
+                                            <select name="" class="adultosHabitacion">
+                                                <option value="">Adultos</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                            <select name="" class="menoresHabitacion">
+                                                <option value="">Menores</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                        <div class="edadMenores">
+                                            <p>Edad menores</p>
+                                            <select name="">
+                                                <option value=""> -- </option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                            </select>
+                                            <select name="">
+                                                <option value=""> -- </option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                            </select>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
                             <i class="fa fa-bed" aria-hidden="true"></i>
-                            <select name="habitaciones" id="habitacionesPaquetes">
-                                <option value="">Habitaciones</option>
-                                <option value="1">1</option>
-                            </select>
-                        </div>
-                        <div>
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <select name="adultos" id="adultosPaquetes">
-                                <option value="">Adultos</option>
-                                <option value="1">1</option>
-                            </select>
-                        </div>
-                        <div>
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <select name="menores" id="menoresPaquetes">
-                                <option value="">Menores</option>
-                                <option value="1">1</option>
-                            </select>
+                            <input type="text" placeholder="Habitaciones" name="habitacionesPaquete" id="habitacionesPaquete">
                         </div>
                         <div class="submit">
                             <input type="submit" value="Buscar">
                         </div>
                     </div>
 
-                    <div class="filtrosContainer">
-                        <p>Edad Menores:</p>
-                        <div>
-                            <select name="edad1" id="edad1Paquetes">
-                                <option value="">---</option>  
-                                <option value="1">1</option>
-                                <option value="2">2</option> 
-                            </select>
-                        </div>
-                        <div>
-                            <select name="edad2" id="edad2Paquetes">
-                                <option value="">---</option>  
-                                <option value="1">1</option>
-                                <option value="2">2</option> 
-                            </select>
-                        </div>
-                    </div>
                 </div>
                 <!--/***************END - PAQUETES***************/-->
 
@@ -829,10 +873,10 @@
     </footer>
     <!--/**********END - FOOTER*************/-->
     <script src="js/vendor/jquery.min.js"></script>
-    
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/owl.carousel.js"></script>
     <script src="js/vendor/owl.navigation.js"></script>
+    <script src="js/vendor/owl.autoplay.js"></script>
     <script src="js/home.js"></script>
 </body>
 </html>

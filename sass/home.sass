@@ -42,11 +42,34 @@
                 button
                     box-shadow: $dropshadow
         .owl-dots
-            margin-top: -240px 
+            display: none
+
+        .owl-nav
+            margin-top: -280px
             position: relative
-            .owl-dot
-                span
-                    box-shadow: $dropshadow
+            .owl-prev
+                background: transparent
+                left: 10px
+                position: absolute
+                font-family: 'FontAwesome'
+                font-size: 33px
+                transition: all .5s ease
+                opacity: .4
+                &:hover
+                    opacity: 1
+                    margin-top: -1px
+            .owl-next
+                background: transparent
+                right: 10px
+                position: absolute
+                font-family: 'FontAwesome'
+                font-size: 33px
+                transition: all .5s ease
+                opacity: .4
+                &:hover
+                    opacity: 1
+                    margin-top: -1px
+                
 /*************END - CARRUSEL HOME*************/
 
 /*************BUSCADOR*************/
@@ -137,6 +160,49 @@
                     margin-right: 10px
             .inputsection
                 margin-bottom: 10px
+            .tooltipHabitaciones
+                align-items: center
+                p 
+                    margin-bottom: 0
+                select 
+                    width: auto
+                    padding: 0
+                .numeroHabitaciones
+                    display: flex
+                    justify-content: space-between
+                    border-bottom: 1px solid $lightGrey
+                    padding-bottom: .8rem
+                    p
+                        font-size: 1.5rem
+                    select
+                        border: 1px solid $lightGrey
+                        border-radius: 5px
+                        padding-left: .5rem
+                        padding-right: .5rem
+                        width: 15%
+                .huespedesContainer
+                    p
+                        margin-right: .4rem
+                    select 
+                        border-bottom: 1px solid $lightGrey
+                        margin-right: .4rem
+                        padding: .4rem
+    
+                    .personasHabitaciones
+                        align-items: center
+                        display: flex
+                        >*
+                            margin-right: 1rem
+                            padding: .8rem
+                        .numeroHabitacion
+                            font-size: 2.3rem
+                            font-weight: bold
+                            
+                    .edadMenores
+                        align-items: center
+                        display: flex
+                        p
+                            font-size: 1rem
         #vuelos
             #fechaVueloRegreso
                 opacity: 1
@@ -157,13 +223,14 @@
                 display: flex
                 flex-direction: row
                 font-size: 20px
-                width: 100px
                 line-height: 30px
                 margin-left: 3px
                 margin-top: 5px
                 p
                     &:first-child
                         margin-right: 5px
+                @media screen and (min-width: 768px)
+                    width: 100px
             p  
                 margin: 0
                
@@ -226,7 +293,7 @@
             flex-direction: column
             position: relative
                 
-            div
+            >div
                 background: white
                 border-bottom: 1px solid #727176
                 display: flex
@@ -261,7 +328,7 @@
             input[type=submit]
                 background: $blueGradient
                 color: white
-                font-size: 22px
+                font-size: 18px
                 padding-right: 25px
                 padding-left: 25px
             
@@ -301,7 +368,7 @@
             display: none
 
         #tooltipViajerosRedondo,
-        #tooltipViajerosSencillo,
+        #tooltipViajeroSencillo,
         #tooltipViajerosArma
             display: none
             >div
@@ -343,11 +410,62 @@
                 box-shadow: $dropshadow                
                 .buttonContainer
                     .controlPasajeros
-                        padding: 6px 12px  
+                        padding: 6px 12px
+
+        .tooltipLugares
+            display: none
+            flex-direction: column
+            top: 46px
+            ul.principal
+                list-style: none
+                margin: 0
+                padding: 0
+                width: 100%
+                >li
+                    border-bottom: 1px solid #cccccc
+                    cursor: pointer
+                    margin: 0
+                    padding-top: 8px
+                   
+                    &:before
+                        content: "\f072"
+                        font-family: 'FontAwesome'
+                        margin-right: 10px
+                        color: $lightGrey
+                    &:first-child
+                        margin-top: 0
+                    &:last-child
+                        border-bottom: none
+                        margin-bottom: 0
+                    &:hover
+                        background-color: #eee
+
+                    ul.secundario
+                        background: white
+                        list-style: none
+                        margin-top: 6px
+                        padding-left: 15px
+                        li  
+                            padding: 8px 10px 12px 8px
+                            &:hover
+                                background-color: #eee
+                            &:before 
+                                content: url("../img/home/drop-arrow-grey.png")
+                                margin-right: 10px
+            strong
+                color: $red
+                font-weight: 600
+
+            @media screen and (min-width:768px )
+                top: 65px
+                width: 215%
+                &:before
+                    right: auto
+                    left: 10px
 
     @media screen and (min-width:768px)
         margin: 0 auto
-        margin-top: -150px
+        margin-top: -110px
         width: 750px
         h2
             display: none

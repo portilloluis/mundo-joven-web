@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .item, .itemPromociones {
   display: flex;
   flex-direction: column;
@@ -68,20 +69,42 @@
           z-index: 9999;
           height: 430px; }
           #carruselHome .itemCarrusel .textContainer h2 {
-            font-size: 2.35rem;
+            font-size: 2.2rem;
             font-weight: 500;
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7); }
           #carruselHome .itemCarrusel .textContainer p {
-            font-size: 2.35rem;
+            font-size: 2.2rem;
             text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
             margin-bottom: 20px; }
           #carruselHome .itemCarrusel .textContainer button {
             box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5); }
       #carruselHome .owl-dots {
-        margin-top: -240px;
+        display: none; }
+      #carruselHome .owl-nav {
+        margin-top: -280px;
         position: relative; }
-        #carruselHome .owl-dots .owl-dot span {
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5); } }
+        #carruselHome .owl-nav .owl-prev {
+          background: transparent;
+          left: 10px;
+          position: absolute;
+          font-family: "FontAwesome";
+          font-size: 33px;
+          transition: all 0.5s ease;
+          opacity: 0.4; }
+          #carruselHome .owl-nav .owl-prev:hover {
+            opacity: 1;
+            margin-top: -1px; }
+        #carruselHome .owl-nav .owl-next {
+          background: transparent;
+          right: 10px;
+          position: absolute;
+          font-family: "FontAwesome";
+          font-size: 33px;
+          transition: all 0.5s ease;
+          opacity: 0.4; }
+          #carruselHome .owl-nav .owl-next:hover {
+            opacity: 1;
+            margin-top: -1px; } }
 
 /*************END - CARRUSEL HOME************ */
 /*************BUSCADOR************ */
@@ -162,6 +185,46 @@
         margin-right: 10px; }
     #buscador .tab-content #paquetes .inputsection {
       margin-bottom: 10px; }
+    #buscador .tab-content #paquetes .tooltipHabitaciones {
+      align-items: center; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones p {
+        margin-bottom: 0; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones select {
+        width: auto;
+        padding: 0; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones .numeroHabitaciones {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 0.8rem; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones .numeroHabitaciones p {
+          font-size: 1.5rem; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones .numeroHabitaciones select {
+          border: 1px solid #cccccc;
+          border-radius: 5px;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          width: 15%; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer p {
+        margin-right: 0.4rem; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer select {
+        border-bottom: 1px solid #cccccc;
+        margin-right: 0.4rem;
+        padding: 0.4rem; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .personasHabitaciones {
+        align-items: center;
+        display: flex; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .personasHabitaciones > * {
+          margin-right: 1rem;
+          padding: 0.8rem; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .personasHabitaciones .numeroHabitacion {
+          font-size: 2.3rem;
+          font-weight: bold; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .edadMenores {
+        align-items: center;
+        display: flex; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .edadMenores p {
+          font-size: 1rem; }
     #buscador .tab-content #vuelos #fechaVueloRegreso {
       opacity: 1;
       position: relative; }
@@ -181,12 +244,14 @@
         display: flex;
         flex-direction: row;
         font-size: 20px;
-        width: 100px;
         line-height: 30px;
         margin-left: 3px;
         margin-top: 5px; }
         #buscador .tab-content .fechaContainer div p:first-child {
           margin-right: 5px; }
+        @media screen and (min-width: 768px) {
+          #buscador .tab-content .fechaContainer div {
+            width: 100px; } }
       #buscador .tab-content .fechaContainer p {
         margin: 0; }
       #buscador .tab-content .fechaContainer .numeroFecha {
@@ -237,13 +302,13 @@
       display: flex;
       flex-direction: column;
       position: relative; }
-      #buscador .tab-content .inputsection div {
+      #buscador .tab-content .inputsection > div {
         background: white;
         border-bottom: 1px solid #727176;
         display: flex;
         flex-grow: 1;
         position: relative; }
-        #buscador .tab-content .inputsection div:last-child {
+        #buscador .tab-content .inputsection > div:last-child {
           border-bottom: 0; }
       #buscador .tab-content .inputsection > div:first-child {
         border-radius: 5px 5px 0 0; }
@@ -271,7 +336,7 @@
       #buscador .tab-content .inputsection input[type=submit] {
         background: linear-gradient(to right, #000941 0%, #00091e 100%);
         color: white;
-        font-size: 22px;
+        font-size: 18px;
         padding-right: 25px;
         padding-left: 25px; }
       #buscador .tab-content .inputsection .submit {
@@ -303,11 +368,11 @@
     #buscador .tab-content #formVueloSencillo {
       display: none; }
     #buscador .tab-content #tooltipViajerosRedondo,
-    #buscador .tab-content #tooltipViajerosSencillo,
+    #buscador .tab-content #tooltipViajeroSencillo,
     #buscador .tab-content #tooltipViajerosArma {
       display: none; }
       #buscador .tab-content #tooltipViajerosRedondo > div,
-      #buscador .tab-content #tooltipViajerosSencillo > div,
+      #buscador .tab-content #tooltipViajeroSencillo > div,
       #buscador .tab-content #tooltipViajerosArma > div {
         align-items: flex-end;
         border-bottom-color: #cccccc;
@@ -316,44 +381,44 @@
         padding-bottom: 6px;
         padding-top: 6px; }
         #buscador .tab-content #tooltipViajerosRedondo > div:last-child,
-        #buscador .tab-content #tooltipViajerosSencillo > div:last-child,
+        #buscador .tab-content #tooltipViajeroSencillo > div:last-child,
         #buscador .tab-content #tooltipViajerosArma > div:last-child {
           justify-content: flex-end; }
       #buscador .tab-content #tooltipViajerosRedondo p,
-      #buscador .tab-content #tooltipViajerosSencillo p,
+      #buscador .tab-content #tooltipViajeroSencillo p,
       #buscador .tab-content #tooltipViajerosArma p {
         font-size: 18px;
         margin-bottom: 0;
         width: 70%; }
       #buscador .tab-content #tooltipViajerosRedondo .buttonContainer,
-      #buscador .tab-content #tooltipViajerosSencillo .buttonContainer,
+      #buscador .tab-content #tooltipViajeroSencillo .buttonContainer,
       #buscador .tab-content #tooltipViajerosArma .buttonContainer {
         display: flex; }
         #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros,
-        #buscador .tab-content #tooltipViajerosSencillo .buttonContainer .controlPasajeros,
+        #buscador .tab-content #tooltipViajeroSencillo .buttonContainer .controlPasajeros,
         #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros {
           padding: 14px 16px;
           background: white;
           border: 1px solid #cccccc;
           transition: all 0.5s ease; }
           #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros:first-child,
-          #buscador .tab-content #tooltipViajerosSencillo .buttonContainer .controlPasajeros:first-child,
+          #buscador .tab-content #tooltipViajeroSencillo .buttonContainer .controlPasajeros:first-child,
           #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros:first-child {
             border-radius: 5px 0 0 5px; }
           #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros:last-child,
-          #buscador .tab-content #tooltipViajerosSencillo .buttonContainer .controlPasajeros:last-child,
+          #buscador .tab-content #tooltipViajeroSencillo .buttonContainer .controlPasajeros:last-child,
           #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros:last-child {
             border-radius: 0 5px 5px 0; }
           #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros:hover,
-          #buscador .tab-content #tooltipViajerosSencillo .buttonContainer .controlPasajeros:hover,
+          #buscador .tab-content #tooltipViajeroSencillo .buttonContainer .controlPasajeros:hover,
           #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros:hover {
             background: #cccccc; }
       #buscador .tab-content #tooltipViajerosRedondo .listo,
-      #buscador .tab-content #tooltipViajerosSencillo .listo,
+      #buscador .tab-content #tooltipViajeroSencillo .listo,
       #buscador .tab-content #tooltipViajerosArma .listo {
         border: none; }
       #buscador .tab-content #tooltipViajerosRedondo .fa,
-      #buscador .tab-content #tooltipViajerosSencillo .fa,
+      #buscador .tab-content #tooltipViajeroSencillo .fa,
       #buscador .tab-content #tooltipViajerosArma .fa {
         font-size: 10px;
         position: relative;
@@ -361,17 +426,65 @@
         margin: 0; }
       @media screen and (min-width: 768px) {
         #buscador .tab-content #tooltipViajerosRedondo,
-        #buscador .tab-content #tooltipViajerosSencillo,
+        #buscador .tab-content #tooltipViajeroSencillo,
         #buscador .tab-content #tooltipViajerosArma {
           box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5); }
           #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros,
-          #buscador .tab-content #tooltipViajerosSencillo .buttonContainer .controlPasajeros,
+          #buscador .tab-content #tooltipViajeroSencillo .buttonContainer .controlPasajeros,
           #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros {
             padding: 6px 12px; } }
+    #buscador .tab-content .tooltipLugares {
+      display: none;
+      flex-direction: column;
+      top: 46px; }
+      #buscador .tab-content .tooltipLugares ul.principal {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%; }
+        #buscador .tab-content .tooltipLugares ul.principal > li {
+          border-bottom: 1px solid #cccccc;
+          cursor: pointer;
+          margin: 0;
+          padding-top: 8px; }
+          #buscador .tab-content .tooltipLugares ul.principal > li:before {
+            content: "";
+            font-family: "FontAwesome";
+            margin-right: 10px;
+            color: #cccccc; }
+          #buscador .tab-content .tooltipLugares ul.principal > li:first-child {
+            margin-top: 0; }
+          #buscador .tab-content .tooltipLugares ul.principal > li:last-child {
+            border-bottom: none;
+            margin-bottom: 0; }
+          #buscador .tab-content .tooltipLugares ul.principal > li:hover {
+            background-color: #eee; }
+          #buscador .tab-content .tooltipLugares ul.principal > li ul.secundario {
+            background: white;
+            list-style: none;
+            margin-top: 6px;
+            padding-left: 15px; }
+            #buscador .tab-content .tooltipLugares ul.principal > li ul.secundario li {
+              padding: 8px 10px 12px 8px; }
+              #buscador .tab-content .tooltipLugares ul.principal > li ul.secundario li:hover {
+                background-color: #eee; }
+              #buscador .tab-content .tooltipLugares ul.principal > li ul.secundario li:before {
+                content: url("../img/home/drop-arrow-grey.png");
+                margin-right: 10px; }
+      #buscador .tab-content .tooltipLugares strong {
+        color: #ff4454;
+        font-weight: 600; }
+      @media screen and (min-width: 768px) {
+        #buscador .tab-content .tooltipLugares {
+          top: 65px;
+          width: 215%; }
+          #buscador .tab-content .tooltipLugares:before {
+            right: auto;
+            left: 10px; } }
   @media screen and (min-width: 768px) {
     #buscador {
       margin: 0 auto;
-      margin-top: -150px;
+      margin-top: -110px;
       width: 750px; }
       #buscador h2 {
         display: none; }
