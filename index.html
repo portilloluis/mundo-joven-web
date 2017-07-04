@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="" >
@@ -147,16 +147,16 @@
         
         <section id="buscador">
             <ul class="nav nav-tabs">
-                <li><a data-toggle="tab" href="#vuelos"><i class="fa fa-plane" aria-hidden="true"></i><span>Vuelos</span></a></li>
+                <li class="active"><a data-toggle="tab" href="#vuelos"><i class="fa fa-plane" aria-hidden="true"></i><span>Vuelos</span></a></li>
                 <li><a data-toggle="tab" href="#hoteles"><i class="fa fa-bed" aria-hidden="true"></i><span>Hoteles</span></a></li>
                 <li><a data-toggle="tab" href="#autos"><i class="fa fa-car" aria-hidden="true"></i> <span>Autos</span></a></li>
-                <li class="active"><a data-toggle="tab" href="#paquetes"><i class="fa fa-suitcase" aria-hidden="true"></i> <span>Paquetes</span></a></li>
+                <li><a data-toggle="tab" href="#paquetes"><i class="fa fa-suitcase" aria-hidden="true"></i> <span>Paquetes</span></a></li>
                 <li><a data-toggle="tab" href="#seguros"><i class="fa fa-life-ring" aria-hidden="true"></i> <span>Seguros</span></a></li>
             </ul>
 
             <div class="tab-content">
                 <!--/***************VUELOS***************/-->
-                <div id="vuelos" class="tab-pane fade">
+                <div id="vuelos" class="tab-pane fade in active">
                     <h2>Vuelos</h2>
                     <div class="radiobuttons">
                         <div class="radio">
@@ -181,7 +181,7 @@
 
                     <form action="" id="formVueloRedondo" >
                         <div class="inputsection">
-                            <div>
+                            <div  class="errorValidation">
                                 <div class="tooltipElement tooltipLugares">
                                     <ul class="principal">
                                         <li>Aeropuerto International Sangster, Montego Bay, <strong>Jama</strong>ica(MBJ)
@@ -196,6 +196,7 @@
                                 </div>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 <input type="text" name="salidaVuelo" id="salidaVueloRedondo" placeholder="Lugar de salida" class="inputLugares">
+                                <p class="errorMensaje">Debes completar este campo</p>
                             </div>
                             <div>
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -540,14 +541,14 @@
                         </div>
                         <div id="conductorEdad">
                              <label for="">Edad del conductor:</label>
-                             <input type="number">   
+                             <input type="number">
                         </div>
                     </div>
                 </div>
                 <!--/***************END - AUTOS***************/-->
                 
                 <!--/***************PAQUETES***************/-->
-                <div id="paquetes" class="tab-pane fade in active">
+                <div id="paquetes" class="tab-pane fade">
                     <h2>Paquetes</h2>
                     <div class="radiobuttons">
                         <div class="radio">
@@ -622,18 +623,35 @@
                                                 <option value="2">2</option>
                                             </select>
                                         </div>
-                                        <div class="edadMenores">
-                                            <p>Edad menores</p>
-                                            <select name="">
-                                                <option value=""> -- </option>
-                                                <option value="">3</option>
-                                                <option value="">4</option>
-                                            </select>
-                                            <select name="">
-                                                <option value=""> -- </option>
-                                                <option value="">3</option>
-                                                <option value="">4</option>
-                                            </select>
+                                        <div>
+                                            <p class="edadMenoresTitulo">Edad menores</p>
+                                            <div class="edadMenores">
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                            </div>
                                         </div> 
                                     </div>
                                     <div class="habitacion">
@@ -650,20 +668,130 @@
                                                 <option value="2">2</option>
                                             </select>
                                         </div>
-                                        <div class="edadMenores">
-                                            <p>Edad menores</p>
-                                            <select name="">
-                                                <option value=""> -- </option>
-                                                <option value="">3</option>
-                                                <option value="">4</option>
-                                            </select>
-                                            <select name="">
-                                                <option value=""> -- </option>
-                                                <option value="">3</option>
-                                                <option value="">4</option>
-                                            </select>
+                                        <div>
+                                            <p class="edadMenoresTitulo">Edad menores</p>
+                                            <div class="edadMenores">
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                            </div>
                                         </div> 
                                     </div>
+                                    <div class="habitacion">
+                                        <div class="personasHabitaciones">
+                                            <p class="numeroHabitacion">1</p>
+                                            <select name="" class="adultosHabitacion">
+                                                <option value="">Adultos</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                            <select name="" class="menoresHabitacion">
+                                                <option value="">Menores</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <p class="edadMenoresTitulo">Edad menores</p>
+                                            <div class="edadMenores">
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="habitacion">
+                                        <div class="personasHabitaciones">
+                                            <p class="numeroHabitacion">1</p>
+                                            <select name="" class="adultosHabitacion">
+                                                <option value="">Adultos</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                            <select name="" class="menoresHabitacion">
+                                                <option value="">Menores</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <p class="edadMenoresTitulo">Edad menores</p>
+                                            <div class="edadMenores">
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                                <select name="">
+                                                    <option value=""> -- </option>
+                                                    <option value="">99</option>
+                                                    <option value="">99</option>
+                                                </select>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="listo button">Listo</button>
                                 </div>
                             </div>
                             <i class="fa fa-bed" aria-hidden="true"></i>

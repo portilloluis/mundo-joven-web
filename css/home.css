@@ -161,10 +161,12 @@
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
     padding: 20px 15px;
     z-index: 999; }
+    #buscador .tab-content .inputsection {
+      margin-bottom: 20px; }
+      #buscador .tab-content .inputsection .positionInitial {
+        position: initial; }
     #buscador .tab-content input::placeholder {
       color: #444242; }
-    #buscador .tab-content #autos .inputsection {
-      margin-bottom: 10px; }
     #buscador .tab-content #autos .filtrosAvanzados {
       align-items: center;
       justify-content: flex-start;
@@ -183,48 +185,67 @@
       #buscador .tab-content #paquetes .filtrosContainer p {
         font-size: 14px;
         margin-right: 10px; }
-    #buscador .tab-content #paquetes .inputsection {
-      margin-bottom: 10px; }
     #buscador .tab-content #paquetes .tooltipHabitaciones {
-      align-items: center; }
+      display: none;
+      align-items: center;
+      height: 95vh;
+      top: -452px; }
       #buscador .tab-content #paquetes .tooltipHabitaciones p {
         margin-bottom: 0; }
       #buscador .tab-content #paquetes .tooltipHabitaciones select {
         width: auto;
         padding: 0; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones .button {
+        margin-top: 15px;
+        width: 100%; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer p {
+        margin-right: 0.4rem; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer select {
+        border-bottom: 1px solid #cccccc;
+        margin-right: 0.6rem;
+        padding: 0.5rem 0;
+        font-size: 15px; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .habitacion {
+        border-bottom: 1px solid #eee;
+        margin-bottom: 5px;
+        padding-bottom: 10px; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .habitacion:last-child {
+          border-bottom: 0; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .habitacion .edadMenoresTitulo {
+          margin: 0;
+          margin-top: 5px;
+          padding: 0; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .personasHabitaciones {
+        align-items: center;
+        display: flex; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .personasHabitaciones > p {
+          padding: 0 0.8rem; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .personasHabitaciones .numeroHabitacion {
+          font-size: 1.8rem;
+          font-weight: bold; }
+      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .edadMenores {
+        align-items: center;
+        display: flex; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .edadMenores select {
+          padding-top: 0;
+          width: 20%; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .edadMenores p {
+          font-size: 1rem;
+          width: 55px;
+          line-height: 12px; }
       #buscador .tab-content #paquetes .tooltipHabitaciones .numeroHabitaciones {
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid #cccccc;
-        padding-bottom: 0.8rem; }
+        padding-bottom: 0.4rem; }
         #buscador .tab-content #paquetes .tooltipHabitaciones .numeroHabitaciones p {
-          font-size: 1.5rem; }
+          font-size: 1.2rem; }
         #buscador .tab-content #paquetes .tooltipHabitaciones .numeroHabitaciones select {
           border: 1px solid #cccccc;
           border-radius: 5px;
           padding-left: 0.5rem;
           padding-right: 0.5rem;
-          width: 15%; }
-      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer p {
-        margin-right: 0.4rem; }
-      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer select {
-        border-bottom: 1px solid #cccccc;
-        margin-right: 0.4rem;
-        padding: 0.4rem; }
-      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .personasHabitaciones {
-        align-items: center;
-        display: flex; }
-        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .personasHabitaciones > * {
-          margin-right: 1rem;
-          padding: 0.8rem; }
-        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .personasHabitaciones .numeroHabitacion {
-          font-size: 2.3rem;
-          font-weight: bold; }
-      #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .edadMenores {
-        align-items: center;
-        display: flex; }
-        #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .edadMenores p {
-          font-size: 1rem; }
+          width: 50px; }
     #buscador .tab-content #vuelos #fechaVueloRegreso {
       opacity: 1;
       position: relative; }
@@ -232,8 +253,6 @@
       display: none; }
       #buscador .tab-content #vuelos .filtrosContainer div {
         display: inline-block; }
-    #buscador .tab-content #vuelos .inputsection {
-      margin-bottom: 10px; }
     #buscador .tab-content .fechaContainer {
       border-radius: 5px;
       color: #444242;
@@ -280,7 +299,7 @@
     #buscador .tab-content .filtrosAvanzados {
       display: flex;
       justify-content: space-between;
-      margin-top: 20px;
+      margin-top: 25px;
       flex-direction: column; }
       #buscador .tab-content .filtrosAvanzados .opcionesAvanzadas a {
         color: white;
@@ -302,6 +321,15 @@
       display: flex;
       flex-direction: column;
       position: relative; }
+      #buscador .tab-content .inputsection .errorValidation {
+        border: 3px solid red;
+        margin-bottom: 28px; }
+      #buscador .tab-content .inputsection .errorMensaje {
+        color: white;
+        position: absolute;
+        bottom: -25px;
+        margin-bottom: 0;
+        font-size: 14px; }
       #buscador .tab-content .inputsection > div {
         background: white;
         border-bottom: 1px solid #727176;
@@ -509,14 +537,48 @@
         padding-bottom: 20px; }
         #buscador .tab-content #hoteles .destino {
           width: 60%; }
+        #buscador .tab-content #autos #conductorEdad input {
+          width: 50px; }
         #buscador .tab-content #seguros .fecha {
           width: 17%; }
+        #buscador .tab-content #paquetes .tooltipHabitaciones {
+          right: 0;
+          width: 255%;
+          height: auto;
+          top: 70px; }
+          #buscador .tab-content #paquetes .tooltipHabitaciones .button {
+            float: right;
+            width: 120px; }
+          #buscador .tab-content #paquetes .tooltipHabitaciones .numeroHabitaciones {
+            justify-content: flex-start; }
+            #buscador .tab-content #paquetes .tooltipHabitaciones .numeroHabitaciones p {
+              margin-right: 15px; }
+          #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; }
+            #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .habitacion {
+              margin-bottom: 10px; }
+              #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .habitacion .edadMenores p {
+                width: 46px;
+                font-size: 0.8rem; }
+              #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .habitacion .personasHabitaciones > * {
+                margin-right: 0;
+                padding: 0.4rem 0; }
+              #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .habitacion .personasHabitaciones p {
+                margin-right: 5px; }
+              #buscador .tab-content #paquetes .tooltipHabitaciones .huespedesContainer .habitacion .personasHabitaciones select {
+                margin-right: 0.4rem; }
         #buscador .tab-content .fechaContainer div {
           flex-direction: column;
           font-size: 13px;
           line-height: 15px; }
         #buscador .tab-content .inputsection {
           flex-direction: row; }
+          #buscador .tab-content .inputsection .errorMensaje {
+            bottom: -28px; }
+          #buscador .tab-content .inputsection .positionInitial {
+            position: relative; }
           #buscador .tab-content .inputsection > div {
             border-bottom: 0;
             border-right: 1px solid #727176; }
@@ -529,6 +591,8 @@
             border-radius: 0 5px 5px 0; }
             #buscador .tab-content .inputsection > div:last-child input {
               border-radius: 0 5px 5px 0; }
+          #buscador .tab-content .inputsection .errorValidation {
+            margin-bottom: 0; }
         #buscador .tab-content .filtrosAvanzados {
           flex-direction: row; }
         #buscador .tab-content .filtrosContainer {
