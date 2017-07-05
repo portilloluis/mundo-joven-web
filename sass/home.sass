@@ -136,10 +136,12 @@
             margin-bottom: 20px
             .positionInitial
                 position: initial
-
+                
         input
             &::placeholder
                 color: $generalFontColor
+        
+
         #autos
             
             .filtrosAvanzados
@@ -153,7 +155,129 @@
                         background: transparent
                         border: 0
                         border-bottom: 1px solid white
+            .inputsectionSecun
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                margin-top: 38px
+                input[type=submit]
+                    background: $blueGradient
+                    border: 0
+                    border-radius: 5px
+                    color: white
+                    font-size: 18px
+                    padding: 12px 35px
+                    width: 100%
 
+                label
+                    font-weight: normal
+                    position: absolute
+                    top: -23px
+                    div
+                        flex-grow: 1
+                        width: 1%
+                        border-radius: 5px
+                        input:first-child, select:first-child
+                            border: 5px
+                    input, select
+                        border-radius: 5px
+                        padding-bottom: 4px
+                        padding-top: 4px
+                    .fa
+                        transform: translateY(20%)
+                .inputsection
+                    box-shadow: none
+                    border-radius: none
+                    select
+                        border-radius: 5px
+                    div
+                        border-radius: 5px
+                        height: 40px
+                        margin-bottom: 30px
+                       
+                        input 
+                            border-radius: 5px
+                        &:first-child
+                            input
+                                border-radius: 5px
+                        &:last-child
+                            margin-bottom: 0  
+                    >div
+                        box-shadow: $dropshadow      
+                .horaAutoContainer
+                    display: flex
+                    justify-content: space-between
+                    padding-left: 33px
+                    width: 100%
+                    input, select
+                        background: transparent
+                        padding-left: 0
+                        border-radius: 0 5px 5px 0
+                @media screen and (min-width: 768px)
+                    flex-direction: row
+                    
+                    .inputsection
+                        
+                        width: 66.6%
+                        div
+                            margin-bottom: 0
+                            border-radius: 0
+                            &:first-child
+                                border-radius: 5px 0 0 5px
+                            &:last-child
+                                border-radius: 0 5px 5px 0
+
+
+        #seguros
+            .tooltipSeguros
+                display: none
+                top: -260px
+                .numeroAsegurados
+                    display: flex
+                    justify-content: space-between
+                    border-bottom: 1px solid $lightGrey
+                    padding-bottom: .4rem
+                    p
+                        margin-bottom: 0
+                        font-size: 1.2rem
+                    select
+                        border: 1px solid $lightGrey
+                        border-radius: 5px
+                        padding: 0 .5rem
+                        width: 50px   
+                .aseguradosContainer
+                    .asegurado
+                        align-items: center
+                        border-bottom: 1px solid $lightGrey
+                        display: flex
+                        justify-content: flex-start
+                        padding-bottom: 5px
+                        padding-top: 5px
+                        
+                        .conIsic
+                            display: flex
+
+                            input[type="checkbox"]
+                                width: 30px
+                            label
+                                margin-bottom: 0
+                                width: 60px
+                        .numeroPasajero
+                            margin-bottom: 0
+                            font-size: 1.8rem
+                            font-weight: bold
+                            margin-right: 5px
+                    .edadAsegurado
+                        border: 1px solid #ccc
+                        padding-left: 6px
+                        padding-top: 0
+                        padding-bottom: 0
+                        width: 60px
+            
+        .listo
+            float: right
+            margin-top: 15px           
+                 
         #paquetes
             .filtrosContainer
                 align-items: baseline
@@ -164,11 +288,10 @@
                     font-size: 14px
                     margin-right: 10px
             
-                
             .tooltipHabitaciones
                 display: none
                 align-items: center
-                height: 95vh
+                height: 87vh
                 top: -452px
                 p 
                     margin-bottom: 0
@@ -261,6 +384,7 @@
                
             .numeroFecha
                 font-size: 40px
+                font-weight: 400
                 line-height: 40px
         .filtrosContainer
             color: white
@@ -356,16 +480,15 @@
                 font-style: normal
             select
                 width: 98%
+                border-radius: 5px
             input:focus
                 outline: none
-
             input[type=submit]
                 background: $blueGradient
                 color: white
                 font-size: 18px
                 padding-right: 25px
                 padding-left: 25px
-            
             .submit
                 flex-grow: 1
 
@@ -527,13 +650,15 @@
             padding-bottom: 20px
             #hoteles
                 .destino
-                    width: 60%
+                    width: 53%
             #autos
                 #conductorEdad
-                    input 
+                    input
                         width: 50px
                 
             #seguros
+                .tooltipSeguros
+                    top: 76px
                 .fecha
                     width: 17%
 

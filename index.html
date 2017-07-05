@@ -407,12 +407,12 @@
                         
                         <div class="radiobuttons">
                             <div>
-                                <input type="checkbox" name="tipoVuelo">
-                                <label for="tipoVuelo">Agregar un Hotel</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="tipoVuelo">
-                                <label for="tipoVuelo">Agregar un Auto</label>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="tipoVuelo"><span class="checkbox-material"><span class="check"></span></span>
+                                        Agregar un Auto
+                                    </label>
+                                </div>
                             </div>
                         </div>
                         
@@ -430,25 +430,11 @@
                         </div>
                         <div>
                             <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                            <input type="hidden" name="fechaVuelo" id="fechaVuelo">
-                            <div class="fechaContainer">
-                                <p class="numeroFecha">99</p>
-                                <div class="comboFecha">
-                                    <p class="diaFecha">Miércoles</p>
-                                    <p class="mesAniofecha"><span class="mes">Noviembre</span> <span>2017</span></p>
-                                </div>
-                            </div>
+                            <input type="text" name="fechaVuelo" id="fechaVueloEntrada" placeholder="Entrada (dd/mm/aaaa)">
                         </div>
                         <div>
                             <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                            <input type="hidden" name="fechaVuelo" id="fechaVuelo">
-                            <div class="fechaContainer">
-                                <p class="numeroFecha">99</p>
-                                <div class="comboFecha">
-                                    <p class="diaFecha">Miércoles</p>
-                                    <p class="mesAniofecha"><span class="mes">Noviembre</span> <span>2017</span></p>
-                                </div>
-                            </div>
+                            <input type="text" name="fechaVuelo" id="fechaVueloSalida" placeholder="Salida (dd/mm/aaaa)">
                         </div>
                         <div class="submit">
                             <input type="submit" value="Buscar">
@@ -476,74 +462,106 @@
                         </div>
 
                     </div>
-                    <div class="inputsection">
-                        <div>
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <select name="pais" id="paisAutos">
-                                <option value="">País</option>
-                                <option value="1">México</option>
-                            </select>
-                        </div>
-                        <div>
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <select name="ciudad" id="ciudadAutos">
-                                <option value="">Ciudad</option>
-                                <option value="1">México</option>
-                            </select>
-                        </div>
-                        <div>
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <select name="lugar" id="lugarAutos">
-                                <option value="">Lugar</option>
-                                <option value="1">México</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="inputsection">
-                        <div>
-                            <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                            <input type="hidden" name="fechaVuelo" id="fechaVuelo">
-                            <div class="fechaContainer">
-                                <p class="numeroFecha">99</p>
-                                <div class="comboFecha">
-                                    <p class="diaFecha">Miércoles</p>
-                                    <p class="mesAniofecha"><span class="mes">Noviembre</span> <span>2017</span></p>
-                                </div>
+
+                    <form action="">
+                        <div class="inputsection">
+                            <div>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <select name="pais" id="paisAutos">
+                                    <option value="">País</option>
+                                    <option value="1">México</option>
+                                </select>
+                            </div>
+                            <div>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <select name="ciudad" id="ciudadAutos">
+                                    <option value="">Ciudad</option>
+                                    <option value="1">México</option>
+                                </select>
+                            </div>
+                            <div>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <select name="lugar" id="lugarAutos">
+                                    <option value="">Lugar</option>
+                                    <option value="1">México</option>
+                                </select>
                             </div>
                         </div>
-                        <div>
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            <input type="text" placeholder="Hora" id="horaRecogida" class="horaRecogida">
-                        </div>
-                        <div>
-                            <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                            <input type="hidden" name="fechaVuelo" id="fechaVuelo">
-                            <div class="fechaContainer">
-                                <p class="numeroFecha">99</p>
-                                <div class="comboFecha">
-                                    <p class="diaFecha">Miércoles</p>
-                                    <p class="mesAniofecha"><span class="mes">Noviembre</span> <span>2017</span></p>
+
+                        <div class="inputsectionSecun">
+                            <div class="inputsection">
+                                <div>
+                                    <label for="fechaVuelo">Fecha de recogida</label>
+                                    <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                    <input type="date" name="fechaVuelo" id="fechaVuelo">
+                                </div>
+                                <div>
+                                    <label for="fechaVuelo">Hora</label>
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    <div class="horaAutoContainer">
+                                        <select name="hora" id="horaRecogida">
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                        </select>
+                                        <select name="min" id="minRecogida">
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="fechaVuelo">Fecha de devolución</label>
+                                    <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                    <input type="date" name="fechaVuelo" id="fechaVuelo">
+                                </div>
+                                <div>
+                                    <label for="fechaVuelo">Hora</label>
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    <div class="horaAutoContainer">
+                                        <select name="hora" id="horaRecogida">
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                        </select>
+                                        <select name="min" id="minRecogida">
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                            <option value="5">05</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="submit">
+                                <input type="submit" value="Buscar">
+                            </div>
                         </div>
-                        <div>
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                            <input type="text" placeholder="Hora" id="horaRecogida" class="horaRecogida">
+                        
+
+                        <div class="filtrosAvanzados">                        
+                            <div class="radiobuttons">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="edadConductor" checked id="checkBoxEdadConductor"><span class="checkbox-material"><span class="check"></span></span>
+                                        Conductor de entre 25 y 70 años
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="conductorEdad">
+                                <label for="">Edad del conductor:</label>
+                                <input type="number">
+                            </div>
                         </div>
-                        <div class="submit">
-                            <input type="submit" value="Buscar">
-                        </div>
-                    </div>
-                    <div class="filtrosAvanzados">                        
-                        <div class="radiobuttons">
-                            <input type="checkbox" name="edadConductor" checked id="checkBoxEdadConductor">
-                            <label for="edadConductor">Conductor de entre 25 y 70 años</label>
-                        </div>
-                        <div id="conductorEdad">
-                             <label for="">Edad del conductor:</label>
-                             <input type="number">
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <!--/***************END - AUTOS***************/-->
                 
@@ -600,7 +618,7 @@
                         <div>
                             <div class="tooltipElement tooltipHabitaciones">
                                 <div class="numeroHabitaciones">
-                                    <p># Habitaciones:</p>
+                                    <p>No. Habitaciones:</p>
                                     <select name="" id="">
                                         <option value="">--</option>
                                         <option value="1">1</option>
@@ -656,7 +674,7 @@
                                     </div>
                                     <div class="habitacion">
                                         <div class="personasHabitaciones">
-                                            <p class="numeroHabitacion">1</p>
+                                            <p class="numeroHabitacion">2</p>
                                             <select name="" class="adultosHabitacion">
                                                 <option value="">Adultos</option>
                                                 <option value="1">1</option>
@@ -701,7 +719,7 @@
                                     </div>
                                     <div class="habitacion">
                                         <div class="personasHabitaciones">
-                                            <p class="numeroHabitacion">1</p>
+                                            <p class="numeroHabitacion">3</p>
                                             <select name="" class="adultosHabitacion">
                                                 <option value="">Adultos</option>
                                                 <option value="1">1</option>
@@ -746,7 +764,7 @@
                                     </div>
                                     <div class="habitacion">
                                         <div class="personasHabitaciones">
-                                            <p class="numeroHabitacion">1</p>
+                                            <p class="numeroHabitacion">4</p>
                                             <select name="" class="adultosHabitacion">
                                                 <option value="">Adultos</option>
                                                 <option value="1">1</option>
@@ -834,9 +852,9 @@
                         <div>
                             <i class="fa fa-calendar-o" aria-hidden="true"></i>
                             <select name="diasViaje" id="diasViajeSeguros">
-                                <option value="">Días de viaje</option>  
-                                <option value="1">1</option>
-                                <option value="2">2</option> 
+                                <option value="">Destino</option>  
+                                <option value="1">Nacional</option>
+                                <option value="2">Internacional</option>
                             </select>
                         </div>
                         <div>
@@ -844,12 +862,48 @@
                             <input type="text" placeholder="Email" name="email" id="emailSeguros">
                         </div>
                         <div>
+                            <div class="tooltipElement tooltipSeguros">
+                                <div class="numeroAsegurados">
+                                    <p>No. Asegurados:</p>
+                                    <select name="" id="">
+                                        <option value="">--</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                                <div class="aseguradosContainer">
+                                    <div class="asegurado">
+                                        <p class="numeroPasajero">1</p>
+                                        <input type="text" placeholder="Edad" class="edadAsegurado">
+                                        <div class="conIsic">
+                                            <input type="checkbox" name="conIsic">
+                                            <label for="">Con ISIC</label>
+                                        </div>
+                                    </div>
+                                    <div class="asegurado">
+                                        <p class="numeroPasajero">2</p>
+                                        <input type="text" placeholder="Edad" class="edadAsegurado">
+                                        <div class="conIsic">
+                                            <input type="checkbox" name="conIsic">
+                                            <label for="">Con ISIC</label>
+                                        </div>
+                                    </div>
+                                    <div class="asegurado">
+                                        <p class="numeroPasajero">3</p>
+                                        <input type="text" placeholder="Edad" class="edadAsegurado">
+                                        <div class="conIsic">
+                                            <input type="checkbox" name="conIsic">
+                                            <label for="">Con ISIC</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="listo button">Listo</button>
+                                </div>
+                            </div>
                             <i class="fa fa-user" aria-hidden="true"></i>
-                            <select name="pasajeros" id="pasajerosSeguros">
-                                <option value="">Pasajeros</option>  
-                                <option value="1">1</option>
-                                <option value="2">2</option> 
-                            </select>
+                            <input type="text" name="pasajeros" id="pasajerosSeguros" placeholder="Pasajeros">  
                         </div>
                         <div class="submit">
                             <input type="submit" value="Buscar">

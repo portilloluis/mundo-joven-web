@@ -96,7 +96,22 @@ input::placeholder
 .owl-theme .owl-dots .owl-dot:hover span
     background-color: $red
 
+.checkbox label
+    color: white
 
+.checkbox .checkbox-material .check,
+label.checkbox-inline .checkbox-material .check
+    border: 2px solid white
+    margin-right: 5px
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check, 
+label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check
+    border-color: white
+    
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check:before,
+label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check:before
+    color: white
 /**********END - GENERALES*************/
 
 /**********HEADER*************/

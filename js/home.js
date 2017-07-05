@@ -32,7 +32,7 @@ $(document).ready(function(){
     });
 
     //Activa y desactiva Tooltip en general
-    $(".inputViajeros, .inputLugares, #habitacionesPaquete").focus(function (){
+    $(".inputViajeros, .inputLugares, #habitacionesPaquete, #pasajerosSeguros").focus(function (){
         var padre = $(this).parent();
         var tooltip = padre.children(".tooltipElement")
         tooltip.slideDown(500)

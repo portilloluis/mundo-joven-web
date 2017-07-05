@@ -177,6 +177,117 @@
           background: transparent;
           border: 0;
           border-bottom: 1px solid white; }
+    #buscador .tab-content #autos .inputsectionSecun {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 38px; }
+      #buscador .tab-content #autos .inputsectionSecun input[type=submit] {
+        background: linear-gradient(to right, #000941 0%, #00091e 100%);
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        font-size: 18px;
+        padding: 12px 35px;
+        width: 100%; }
+      #buscador .tab-content #autos .inputsectionSecun label {
+        font-weight: normal;
+        position: absolute;
+        top: -23px; }
+        #buscador .tab-content #autos .inputsectionSecun label div {
+          flex-grow: 1;
+          width: 1%;
+          border-radius: 5px; }
+          #buscador .tab-content #autos .inputsectionSecun label div input:first-child, #buscador .tab-content #autos .inputsectionSecun label div select:first-child {
+            border: 5px; }
+        #buscador .tab-content #autos .inputsectionSecun label input, #buscador .tab-content #autos .inputsectionSecun label select {
+          border-radius: 5px;
+          padding-bottom: 4px;
+          padding-top: 4px; }
+        #buscador .tab-content #autos .inputsectionSecun label .fa {
+          transform: translateY(20%); }
+      #buscador .tab-content #autos .inputsectionSecun .inputsection {
+        box-shadow: none;
+        border-radius: none; }
+        #buscador .tab-content #autos .inputsectionSecun .inputsection select {
+          border-radius: 5px; }
+        #buscador .tab-content #autos .inputsectionSecun .inputsection div {
+          border-radius: 5px;
+          height: 40px;
+          margin-bottom: 30px; }
+          #buscador .tab-content #autos .inputsectionSecun .inputsection div input {
+            border-radius: 5px; }
+          #buscador .tab-content #autos .inputsectionSecun .inputsection div:first-child input {
+            border-radius: 5px; }
+          #buscador .tab-content #autos .inputsectionSecun .inputsection div:last-child {
+            margin-bottom: 0; }
+        #buscador .tab-content #autos .inputsectionSecun .inputsection > div {
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5); }
+      #buscador .tab-content #autos .inputsectionSecun .horaAutoContainer {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 33px;
+        width: 100%; }
+        #buscador .tab-content #autos .inputsectionSecun .horaAutoContainer input, #buscador .tab-content #autos .inputsectionSecun .horaAutoContainer select {
+          background: transparent;
+          padding-left: 0;
+          border-radius: 0 5px 5px 0; }
+      @media screen and (min-width: 768px) {
+        #buscador .tab-content #autos .inputsectionSecun {
+          flex-direction: row; }
+          #buscador .tab-content #autos .inputsectionSecun .inputsection {
+            width: 66.6%; }
+            #buscador .tab-content #autos .inputsectionSecun .inputsection div {
+              margin-bottom: 0;
+              border-radius: 0; }
+              #buscador .tab-content #autos .inputsectionSecun .inputsection div:first-child {
+                border-radius: 5px 0 0 5px; }
+              #buscador .tab-content #autos .inputsectionSecun .inputsection div:last-child {
+                border-radius: 0 5px 5px 0; } }
+    #buscador .tab-content #seguros .tooltipSeguros {
+      display: none;
+      top: -260px; }
+      #buscador .tab-content #seguros .tooltipSeguros .numeroAsegurados {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 0.4rem; }
+        #buscador .tab-content #seguros .tooltipSeguros .numeroAsegurados p {
+          margin-bottom: 0;
+          font-size: 1.2rem; }
+        #buscador .tab-content #seguros .tooltipSeguros .numeroAsegurados select {
+          border: 1px solid #cccccc;
+          border-radius: 5px;
+          padding: 0 0.5rem;
+          width: 50px; }
+      #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado {
+        align-items: center;
+        border-bottom: 1px solid #cccccc;
+        display: flex;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+        padding-top: 5px; }
+        #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado .conIsic {
+          display: flex; }
+          #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado .conIsic input[type="checkbox"] {
+            width: 30px; }
+          #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado .conIsic label {
+            margin-bottom: 0;
+            width: 60px; }
+        #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado .numeroPasajero {
+          margin-bottom: 0;
+          font-size: 1.8rem;
+          font-weight: bold;
+          margin-right: 5px; }
+      #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .edadAsegurado {
+        border: 1px solid #ccc;
+        padding-left: 6px;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 60px; }
+    #buscador .tab-content .listo {
+      float: right;
+      margin-top: 15px; }
     #buscador .tab-content #paquetes .filtrosContainer {
       align-items: baseline;
       display: flex;
@@ -188,7 +299,7 @@
     #buscador .tab-content #paquetes .tooltipHabitaciones {
       display: none;
       align-items: center;
-      height: 95vh;
+      height: 87vh;
       top: -452px; }
       #buscador .tab-content #paquetes .tooltipHabitaciones p {
         margin-bottom: 0; }
@@ -275,6 +386,7 @@
         margin: 0; }
       #buscador .tab-content .fechaContainer .numeroFecha {
         font-size: 40px;
+        font-weight: 400;
         line-height: 40px; }
     #buscador .tab-content .filtrosContainer {
       color: white;
@@ -358,7 +470,8 @@
         width: 100%;
         font-style: normal; }
       #buscador .tab-content .inputsection select {
-        width: 98%; }
+        width: 98%;
+        border-radius: 5px; }
       #buscador .tab-content .inputsection input:focus {
         outline: none; }
       #buscador .tab-content .inputsection input[type=submit] {
@@ -536,9 +649,11 @@
         border-radius: 0 8px 8px 8px;
         padding-bottom: 20px; }
         #buscador .tab-content #hoteles .destino {
-          width: 60%; }
+          width: 53%; }
         #buscador .tab-content #autos #conductorEdad input {
           width: 50px; }
+        #buscador .tab-content #seguros .tooltipSeguros {
+          top: 76px; }
         #buscador .tab-content #seguros .fecha {
           width: 17%; }
         #buscador .tab-content #paquetes .tooltipHabitaciones {
