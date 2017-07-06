@@ -642,6 +642,12 @@
         position: relative;
         line-height: 0;
         margin: 0; }
+      #buscador .tab-content #tooltipViajerosRedondo .numeroAdulos, #buscador .tab-content #tooltipViajerosRedondo .numeroMenores,
+      #buscador .tab-content #tooltipViajeroSencillo .numeroAdulos,
+      #buscador .tab-content #tooltipViajeroSencillo .numeroMenores,
+      #buscador .tab-content #tooltipViajerosArma .numeroAdulos,
+      #buscador .tab-content #tooltipViajerosArma .numeroMenores {
+        font-weight: bold; }
       @media screen and (min-width: 768px) {
         #buscador .tab-content #tooltipViajerosRedondo,
         #buscador .tab-content #tooltipViajeroSencillo,
