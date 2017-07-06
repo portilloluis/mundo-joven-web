@@ -181,7 +181,7 @@
 
                     <form action="" id="formVueloRedondo" >
                         <div class="inputsection">
-                            <div  class="errorValidation">
+                            <div class="errorValidation">
                                 <div class="tooltipElement tooltipLugares">
                                     <ul class="principal">
                                         <li>Aeropuerto International Sangster, Montego Bay, <strong>Jama</strong>ica(MBJ)
@@ -326,30 +326,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <div id="tooltipViajerosArma" class="tooltipElement">
-                                    <div>
-                                        <p><span class="numeroAdulos">2</span> Adultos</p>
-                                        <div class="buttonContainer">
-                                            <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
-                                            <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <p><span class="numeroMenores">2</span> Menores</p>
-                                        <div class="buttonContainer">
-                                            <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
-                                            <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <button class="listo button">Listo</button>
-                                    </div>
-                                </div>
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <input type="text" placeholder="Viajeros" id="numeroViajerosRedondo" class="inputViajeros">
-                            </div>
                         </div>
                         <div class="inputsection">
                             <div>
@@ -371,9 +347,39 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="submit">
-                                <input type="submit" value="Buscar">
+                        </div>
+                        
+                        <div class="inputsectionSecun">
+                            <div class="inputsection">
+                                <div>
+                                    <div id="tooltipViajerosArma" class="tooltipElement">
+                                        <div>
+                                            <p><span class="numeroAdulos">2</span> Adultos</p>
+                                            <div class="buttonContainer">
+                                                <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                                <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <p><span class="numeroMenores">2</span> Menores</p>
+                                            <div class="buttonContainer">
+                                                <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                                <button class="controlPasajeros"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="listo button">Listo</button>
+                                        </div>
+                                    </div>
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <input type="text" placeholder="Viajeros" id="numeroViajerosRedondo" class="inputViajeros">
+                                </div>
+                            </div>
+                            <div class="inputsection">
+                                <div class="submit">
+                                    <input type="submit" value="Buscar">
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -424,7 +430,7 @@
                 <div id="hoteles" class="tab-pane fade">
                     <h2>Hoteles</h2>
                     <div class="inputsection">
-                        <div class="destino">
+                        <div class="destino errorValidation">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <input type="text" placeholder="Escribe tu destino. Ejemplo: Ciudad">
                         </div>
@@ -850,7 +856,7 @@
                             </div>
                         </div>
                         <div>
-                            <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                            <i class="fa fa-globe" aria-hidden="true"></i>
                             <select name="diasViaje" id="diasViajeSeguros">
                                 <option value="">Destino</option>  
                                 <option value="1">Nacional</option>

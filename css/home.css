@@ -161,10 +161,8 @@
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
     padding: 20px 15px;
     z-index: 999; }
-    #buscador .tab-content .inputsection {
-      margin-bottom: 20px; }
-      #buscador .tab-content .inputsection .positionInitial {
-        position: initial; }
+    #buscador .tab-content .inputsection .positionInitial {
+      position: initial; }
     #buscador .tab-content input::placeholder {
       color: #444242; }
     #buscador .tab-content #autos .filtrosAvanzados {
@@ -414,7 +412,7 @@
     #buscador .tab-content .filtrosAvanzados {
       display: flex;
       justify-content: space-between;
-      margin-top: 25px;
+      margin-top: 14px;
       flex-direction: column; }
       #buscador .tab-content .filtrosAvanzados .opcionesAvanzadas a {
         color: white;
@@ -429,6 +427,9 @@
           margin-right: 5px; }
       #buscador .tab-content .filtrosAvanzados .opcionesAvanzadas input::placeholder {
         color: white; }
+      @media screen and (min-width: 768px) {
+        #buscador .tab-content .filtrosAvanzados .opcionesAvanzadas #verOpciones {
+          margin-bottom: 0; } }
     #buscador .tab-content .inputsection {
       align-items: stretch;
       border-radius: 6px;
@@ -437,12 +438,18 @@
       flex-direction: column;
       position: relative; }
       #buscador .tab-content .inputsection .errorValidation {
-        border: 3px solid red;
-        margin-bottom: 28px; }
+        margin-bottom: 24px;
+        font-weight: bold; }
+        #buscador .tab-content .inputsection .errorValidation input {
+          background: #ff8e98 !important; }
+          #buscador .tab-content .inputsection .errorValidation input::placeholder {
+            color: #9d000d; }
+        #buscador .tab-content .inputsection .errorValidation .fa {
+          color: #9d000d; }
       #buscador .tab-content .inputsection .errorMensaje {
         color: white;
         position: absolute;
-        bottom: -25px;
+        bottom: -21px;
         margin-bottom: 0;
         font-size: 14px; }
       #buscador .tab-content .inputsection > div {
@@ -484,7 +491,18 @@
         padding-right: 25px;
         padding-left: 25px; }
       #buscador .tab-content .inputsection .submit {
+        position: relative;
         flex-grow: 1; }
+        #buscador .tab-content .inputsection .submit .fa {
+          color: white;
+          font-size: 30px;
+          position: absolute;
+          margin-left: auto;
+          margin-right: auto;
+          left: 0;
+          right: 0;
+          width: 24px;
+          line-height: 19px; }
       #buscador .tab-content .inputsection .fa {
         bottom: 0;
         border-top: 0;
@@ -511,6 +529,62 @@
     #buscador .tab-content #formVueloArma,
     #buscador .tab-content #formVueloSencillo {
       display: none; }
+    #buscador .tab-content #formVueloArma .inputsection {
+      margin-top: 25px; }
+      #buscador .tab-content #formVueloArma .inputsection:first-child {
+        margin-top: 0; }
+      #buscador .tab-content #formVueloArma .inputsection input, #buscador .tab-content #formVueloArma .inputsection .fechaContainer {
+        padding: 15px 10px 15px 33px; }
+      #buscador .tab-content #formVueloArma .inputsection .fechaContainer .numeroFecha {
+        font-size: 27px; }
+      #buscador .tab-content #formVueloArma .inputsection .submit input {
+        padding-left: 0; }
+      @media screen and (min-width: 768px) {
+        #buscador .tab-content #formVueloArma .inputsection:last-child {
+          margin-left: auto;
+          width: 29%; }
+          #buscador .tab-content #formVueloArma .inputsection:last-child input, #buscador .tab-content #formVueloArma .inputsection:last-child .fechaContainer {
+            padding: 7px 10px 7px 33px; }
+        #buscador .tab-content #formVueloArma .inputsection input, #buscador .tab-content #formVueloArma .inputsection .fechaContainer {
+          padding: 0 10px 0 33px; }
+        #buscador .tab-content #formVueloArma .inputsection .submit {
+          width: 40%; }
+          #buscador .tab-content #formVueloArma .inputsection .submit input {
+            padding-left: 0;
+            padding-right: 0; } }
+    #buscador .tab-content #formVueloArma .inputsectionSecun {
+      align-items: flex-start;
+      margin-top: 25px; }
+      #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection {
+        margin-top: 0; }
+        #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection:first-child div {
+          border-radius: 5px 5px 0 0; }
+        #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection:first-child input {
+          border-radius: 5px 5px 0 0; }
+        #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection:last-child div {
+          border-radius: 0 0 5px 5px; }
+        #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection:last-child input {
+          border-radius: 0 0 5px 5px; }
+      @media screen and (min-width: 768px) {
+        #buscador .tab-content #formVueloArma .inputsectionSecun {
+          display: flex; }
+          #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection:first-child div, #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection:first-child input {
+            border-radius: 5px;
+            height: 40px; }
+          #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection:last-child {
+            width: 118px; }
+            #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection:last-child div, #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection:last-child input {
+              width: 118px;
+              border-radius: 5px; }
+          #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection .submit {
+            height: 50px;
+            width: 118px; }
+          #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection #tooltipViajerosArma {
+            height: auto; }
+            #buscador .tab-content #formVueloArma .inputsectionSecun .inputsection #tooltipViajerosArma div {
+              height: auto;
+              padding-bottom: 6px;
+              padding-top: 6px; } }
     #buscador .tab-content #tooltipViajerosRedondo,
     #buscador .tab-content #tooltipViajeroSencillo,
     #buscador .tab-content #tooltipViajerosArma {
@@ -660,7 +734,7 @@
         #buscador .tab-content #seguros .fecha {
           width: 17%; }
         #buscador .tab-content #paquetes .tooltipHabitaciones {
-          right: 0;
+          left: -370px;
           width: 255%;
           height: auto;
           top: 70px; }
@@ -694,7 +768,8 @@
         #buscador .tab-content .inputsection {
           flex-direction: row; }
           #buscador .tab-content .inputsection .errorMensaje {
-            bottom: -28px; }
+            bottom: -21px;
+            font-size: 13px; }
           #buscador .tab-content .inputsection .positionInitial {
             position: relative; }
           #buscador .tab-content .inputsection > div {
@@ -712,7 +787,8 @@
           #buscador .tab-content .inputsection .errorValidation {
             margin-bottom: 0; }
         #buscador .tab-content .filtrosAvanzados {
-          flex-direction: row; }
+          flex-direction: row;
+          margin-top: 22px; }
         #buscador .tab-content .filtrosContainer {
           align-items: flex-end;
           flex-direction: row; }

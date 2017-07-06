@@ -76,8 +76,12 @@ input::placeholder
     display: block
     position: absolute!important
     top: -150px
-    width: 100%
+    width: 97%
     z-index: 30
+    margin-left: auto
+    margin-right: auto
+    left: 0
+    right: 0
     @media screen and (min-width: 768px)
         top: 70px
         &:before
@@ -99,10 +103,17 @@ input::placeholder
 .checkbox label
     color: white
 
+.checkbox .checkbox-material,
+label.checkbox-inline .checkbox-material
+    width: 15px
+    height: 15px
+
 .checkbox .checkbox-material .check,
 label.checkbox-inline .checkbox-material .check
     border: 2px solid white
     margin-right: 5px
+    width: 15px
+    height: 15px
 
 .checkbox input[type=checkbox]:checked + .checkbox-material .check, 
 label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check
@@ -112,6 +123,8 @@ label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check
 .checkbox input[type=checkbox]:checked + .checkbox-material .check:before,
 label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check:before
     color: white
+    margin-top: -6px
+    margin-left: 4px
 /**********END - GENERALES*************/
 
 /**********HEADER*************/
