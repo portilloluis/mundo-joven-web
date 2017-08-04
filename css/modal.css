@@ -1,0 +1,38 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  position: relative;
+  transition: all 0.5s ease;
+  width: 95%; }
+  .item figure {
+    background: transparent;
+    width: 100%; }
+    .item figure img {
+      display: block;
+      width: 100%; }
+  .item:hover {
+    box-shadow: 5px 5px 13px 2px rgba(0, 0, 0, 0.4); }
+  .item .infoContainer {
+    border: 1px solid #b3b3b3;
+    border-top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1rem 1rem;
+    width: 100%; }
+    .item .infoContainer div {
+      flex-grow: 1; }
+    .item .infoContainer h2 {
+      color: #444242;
+      margin: 0; }
+    .item .infoContainer sup {
+      display: block; }
+    .item .infoContainer .precio {
+      color: #ff4454;
+      font-weight: 600;
+      margin-bottom: 0; }
+      .item .infoContainer .precio small {
+        text-transform: uppercase; }
+
+/*# sourceMappingURL=modal.css.map */

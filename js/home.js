@@ -76,4 +76,12 @@ $(document).ready(function(){
         e.preventDefault
    })
 
+   //Activa el modal
+
+   $("#modalPrendido").click(function(){
+        $('#modalDestino').modal()
+   })
+
+  
+
 });

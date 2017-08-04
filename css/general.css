@@ -273,5 +273,27 @@ label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check:b
     width: 40%; }
 
 /**********END - FOOTER************ */
+/**********MODAL************ */
+.modal#modalDestino {
+  text-align: center; }
+  .modal#modalDestino h4 {
+    color: #ff4454;
+    font-weight: bold;
+    font-size: 2rem; }
+  .modal#modalDestino .modal-footer {
+    padding: 24px;
+    padding-top: 0;
+    text-align: center; }
+    .modal#modalDestino .modal-footer button {
+      background-color: #ff4454;
+      color: white !important; }
+      .modal#modalDestino .modal-footer button:hover {
+        background-color: #d50012; }
+  .modal#modalDestino .modal-content .modal-body {
+    padding: 10px 0; }
+  .modal#modalDestino .modal-dialog {
+    width: 400px; }
+
+/***********END MODAL********** */
 
 /*# sourceMappingURL=general.css.map */

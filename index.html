@@ -13,10 +13,30 @@
     <link rel="stylesheet" href="css/vendor/bootstrap-material-design-mod.css">
     <link rel="stylesheet" href="css/vendor/owl-carousel.css">
     <link rel="stylesheet" href="css/vendor/owl.theme.default.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+    
+   <button  id="modalPrendido" class="type-error" aria-label="Try me! Example: error modal">Modal Prendido</button>
+
+   <!-- Modal -->
+    <div class="modal fade" id="modalDestino" tabindex="-1" role="dialog" aria-labelledby="modalDestinoLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modalDestinoLabel">Verifica tus datos</h4>
+        </div>
+        <div class="modal-body">
+            <p>El origen y el destino son iguales</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
+        </div>
+        </div>
+    </div>
+    </div>
 
     <!--/**********HEADER*************/-->
     <header id="headerPrincipal">
@@ -1060,6 +1080,7 @@
         </div>
     </footer>
     <!--/**********END - FOOTER*************/-->
+    
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/owl.carousel.js"></script>
