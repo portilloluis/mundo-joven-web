@@ -52,7 +52,7 @@
         padding-top: 3rem;
         position: relative; }
         #carruselHome .itemCarrusel::before {
-          background-color: rgba(0, 0, 0, 0.5);
+          background-color: rgba(0, 0, 0, 0.3);
           content: "";
           height: 100%;
           position: absolute;
@@ -246,8 +246,7 @@
               #buscador .tab-content #autos .inputsectionSecun .inputsection div select {
                 padding: 6px; } }
     #buscador .tab-content #seguros .tooltipSeguros {
-      display: none;
-      top: -260px; }
+      display: none; }
       #buscador .tab-content #seguros .tooltipSeguros .numeroAsegurados {
         display: flex;
         justify-content: space-between;
@@ -262,7 +261,7 @@
           padding: 0 0.5rem;
           width: 50px; }
       #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado {
-        align-items: center;
+        align-items: flex-start;
         border-bottom: 1px solid #cccccc;
         display: flex;
         justify-content: flex-start;
@@ -270,11 +269,17 @@
         padding-top: 5px; }
         #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado .conIsic {
           display: flex; }
+          #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado .conIsic .checkbox .checkbox-material .check {
+            border-color: #0c1320;
+            margin: 0;
+            margin-left: 14px; }
+          #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado .conIsic .checkbox input[type=checkbox]:checked + .checkbox-material .check:before, #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado .conIsic label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check:before {
+            color: #0c1320; }
           #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado .conIsic input[type="checkbox"] {
             width: 30px; }
           #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado .conIsic label {
-            margin-bottom: 0;
-            width: 60px; }
+            color: #444242;
+            margin-bottom: 0; }
         #buscador .tab-content #seguros .tooltipSeguros .aseguradosContainer .asegurado .numeroPasajero {
           margin-bottom: 0;
           font-size: 1.8rem;
@@ -288,7 +293,11 @@
         width: 60px; }
     #buscador .tab-content .listo {
       float: right;
-      margin-top: 15px; }
+      margin-top: 15px;
+      width: 100%; }
+    @media screen and (min-width: 768px) {
+      #buscador .tab-content .listo {
+        width: 80px; } }
     #buscador .tab-content #paquetes .filtrosContainer {
       align-items: baseline;
       display: flex;
@@ -299,9 +308,7 @@
         margin-right: 10px; }
     #buscador .tab-content #paquetes .tooltipHabitaciones {
       display: none;
-      align-items: center;
-      height: 87vh;
-      top: -452px; }
+      align-items: center; }
       #buscador .tab-content #paquetes .tooltipHabitaciones p {
         margin-bottom: 0; }
       #buscador .tab-content #paquetes .tooltipHabitaciones select {
@@ -402,7 +409,7 @@
           background: transparent;
           border: none;
           color: white;
-          font-size: 12px;
+          font-size: 14px;
           padding: 2px 5px;
           border-bottom: 1px solid; }
         #buscador .tab-content .filtrosContainer div select option {
@@ -414,8 +421,10 @@
       justify-content: space-between;
       margin-top: 14px;
       flex-direction: column; }
-      #buscador .tab-content .filtrosAvanzados .radiobuttons label {
-        margin-right: 0; }
+      #buscador .tab-content .filtrosAvanzados .radiobuttons {
+        margin-top: 12px; }
+        #buscador .tab-content .filtrosAvanzados .radiobuttons label {
+          margin-right: 0; }
       #buscador .tab-content .filtrosAvanzados .opcionesAvanzadas a {
         color: white;
         display: block;
@@ -599,7 +608,8 @@
         display: flex;
         justify-content: space-between;
         padding-bottom: 6px;
-        padding-top: 6px; }
+        padding-top: 6px;
+        height: auto; }
         #buscador .tab-content #tooltipViajerosRedondo > div:last-child,
         #buscador .tab-content #tooltipViajeroSencillo > div:last-child,
         #buscador .tab-content #tooltipViajerosArma > div:last-child {
@@ -636,7 +646,8 @@
       #buscador .tab-content #tooltipViajerosRedondo .listo,
       #buscador .tab-content #tooltipViajeroSencillo .listo,
       #buscador .tab-content #tooltipViajerosArma .listo {
-        border: none; }
+        border: none;
+        width: 100%; }
       #buscador .tab-content #tooltipViajerosRedondo .fa,
       #buscador .tab-content #tooltipViajeroSencillo .fa,
       #buscador .tab-content #tooltipViajerosArma .fa {
@@ -658,7 +669,11 @@
           #buscador .tab-content #tooltipViajerosRedondo .buttonContainer .controlPasajeros,
           #buscador .tab-content #tooltipViajeroSencillo .buttonContainer .controlPasajeros,
           #buscador .tab-content #tooltipViajerosArma .buttonContainer .controlPasajeros {
-            padding: 6px 12px; } }
+            padding: 6px 12px; }
+          #buscador .tab-content #tooltipViajerosRedondo .listo,
+          #buscador .tab-content #tooltipViajeroSencillo .listo,
+          #buscador .tab-content #tooltipViajerosArma .listo {
+            width: 80px; } }
     #buscador .tab-content .tooltipLugares {
       display: none;
       flex-direction: column;
@@ -748,7 +763,7 @@
           top: 70px; }
           #buscador .tab-content #paquetes .tooltipHabitaciones .button {
             float: right;
-            width: 120px; }
+            width: 80px; }
           #buscador .tab-content #paquetes .tooltipHabitaciones .numeroHabitaciones {
             justify-content: flex-start; }
             #buscador .tab-content #paquetes .tooltipHabitaciones .numeroHabitaciones p {

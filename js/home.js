@@ -37,18 +37,15 @@ $(document).ready(function(){
         var tooltip = padre.children(".tooltipElement")
         tooltip.slideDown(500)
     })
-    $(".listo").click(function ( e ){   
+    $(".listo, .cerrarTooltip .fa-times").click(function ( e ){   
         e.preventDefault()
         $(this).parent().parent().slideUp(300)
     })
     $(".tooltipLugares").click( function ( e ) {
-        console.log(e)
-
         if(e.target.localName == "li"){
             $(this).closest( ".tooltipLugares").slideUp(300)
         }
     })
-
 
     //Cambia el formulario en el tabs de vuelos, dependiendo si eligen sencillo, redondo y arma tu paquete
     $("#radioVueloRedondo").click(function () {
@@ -82,6 +79,8 @@ $(document).ready(function(){
         $('#modalDestino').modal()
    })
 
+
+  
   
 
 });

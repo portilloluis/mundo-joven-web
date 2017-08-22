@@ -19,7 +19,7 @@
 </head>
 <body>
     
-   <button  id="modalPrendido" class="type-error" aria-label="Try me! Example: error modal">Modal Prendido</button>
+   <!--<button  id="modalPrendido" class="type-error" aria-label="Try me! Example: error modal">Modal Prendido</button>-->
 
    <!-- Modal -->
     <div class="modal fade" id="modalDestino" tabindex="-1" role="dialog" aria-labelledby="modalDestinoLabel">
@@ -246,7 +246,10 @@
                             </div>
                             <div>
                                 <div id="tooltipViajerosRedondo" class="tooltipElement">
-                                    <div>
+                                    <div class="cerrarTooltip">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                    </div>
+                                    <div>                                        
                                         <p><span class="numeroAdulos">2</span> Adultos</p>
                                         <div class="buttonContainer">
                                             <button class="controlPasajeros"><i class="fa fa-minus" aria-hidden="true"></i></button>
@@ -297,6 +300,9 @@
                             </div>
                             <div>
                                 <div id="tooltipViajeroSencillo" class="tooltipElement">
+                                    <div class="cerrarTooltip">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                    </div>
                                     <div>
                                         <p><span class="numeroAdulos">2</span> Adultos</p>
                                         <div class="buttonContainer">
@@ -373,6 +379,9 @@
                             <div class="inputsection">
                                 <div>
                                     <div id="tooltipViajerosArma" class="tooltipElement">
+                                        <div class="cerrarTooltip">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </div>
                                         <div>
                                             <p><span class="numeroAdulos">2</span> Adultos</p>
                                             <div class="buttonContainer">
@@ -643,6 +652,9 @@
                         </div>
                         <div>
                             <div class="tooltipElement tooltipHabitaciones">
+                                <div class="cerrarTooltip">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
                                 <div class="numeroHabitaciones">
                                     <p>No. Habitaciones:</p>
                                     <select name="" id="">
@@ -889,6 +901,9 @@
                         </div>
                         <div>
                             <div class="tooltipElement tooltipSeguros">
+                                <div class="cerrarTooltip">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
                                 <div class="numeroAsegurados">
                                     <p>No. Asegurados:</p>
                                     <select name="" id="">
@@ -903,24 +918,36 @@
                                         <p class="numeroPasajero">1</p>
                                         <input type="text" placeholder="Edad" class="edadAsegurado">
                                         <div class="conIsic">
-                                            <input type="checkbox" name="conIsic">
-                                            <label for="">Con ISIC</label>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="conIsic"><span class="checkbox-material"><span class="check"></span></span>
+                                                            Con ISIC
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="asegurado">
                                         <p class="numeroPasajero">2</p>
                                         <input type="text" placeholder="Edad" class="edadAsegurado">
                                         <div class="conIsic">
-                                            <input type="checkbox" name="conIsic">
-                                            <label for="">Con ISIC</label>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="conIsic"><span class="checkbox-material"><span class="check"></span></span>
+                                                            Con ISIC
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="asegurado">
                                         <p class="numeroPasajero">3</p>
                                         <input type="text" placeholder="Edad" class="edadAsegurado">
                                         <div class="conIsic">
-                                            <input type="checkbox" name="conIsic">
-                                            <label for="">Con ISIC</label>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="conIsic"><span class="checkbox-material"><span class="check"></span></span>
+                                                                Con ISIC
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

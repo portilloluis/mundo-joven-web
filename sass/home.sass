@@ -15,7 +15,7 @@
             padding-top: 3rem
             position: relative
             &::before
-                background-color: rgba(0,0,0,0.5)
+                background-color: rgba(0,0,0,0.3)
                 content: ""
                 height: 100%
                 position: absolute
@@ -234,7 +234,6 @@
         #seguros
             .tooltipSeguros
                 display: none
-                top: -260px
                 .numeroAsegurados
                     display: flex
                     justify-content: space-between
@@ -250,7 +249,7 @@
                         width: 50px   
                 .aseguradosContainer
                     .asegurado
-                        align-items: center
+                        align-items: flex-start
                         border-bottom: 1px solid $lightGrey
                         display: flex
                         justify-content: flex-start
@@ -259,12 +258,20 @@
                         
                         .conIsic
                             display: flex
+                            .checkbox
+                                .checkbox-material
+                                    .check
+                                        border-color: $menuBlue
+                                        margin: 0
+                                        margin-left: 14px                 
+                            .checkbox input[type=checkbox]:checked + .checkbox-material .check:before, label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check:before
+                                color: $menuBlue
 
                             input[type="checkbox"]
                                 width: 30px
                             label
+                                color: $generalFontColor
                                 margin-bottom: 0
-                                width: 60px
                         .numeroPasajero
                             margin-bottom: 0
                             font-size: 1.8rem
@@ -279,8 +286,12 @@
             
         .listo
             float: right
-            margin-top: 15px           
-                 
+            margin-top: 15px
+            width: 100%       
+        @media screen and (min-width: 768px)
+            .listo
+                width: 80px
+
         #paquetes
             .filtrosContainer
                 align-items: baseline
@@ -294,8 +305,6 @@
             .tooltipHabitaciones
                 display: none
                 align-items: center
-                height: 87vh
-                top: -452px
                 p 
                     margin-bottom: 0
                 select 
@@ -355,7 +364,7 @@
                         border-radius: 5px
                         padding-left: .5rem
                         padding-right: .5rem
-                        width: 50px           
+                        width: 50px   
         #vuelos
             #fechaVueloRegreso
                 opacity: 1
@@ -404,7 +413,7 @@
                     background: transparent
                     border: none       
                     color: white
-                    font-size: 12px
+                    font-size: 14px
                     padding: 2px 5px
                     border-bottom: 1px solid
                 select 
@@ -421,6 +430,7 @@
             margin-top: 14px
             flex-direction: column
             .radiobuttons
+                margin-top: 12px
                 label 
                     margin-right: 0 
             .opcionesAvanzadas
@@ -435,14 +445,11 @@
                         vertical-align: middle
                         margin-left: 5px
                         margin-right: 5px
-                    @media screen and (min-width: 768px)
-                    
 
                 input
                     &::placeholder
                         color: white
-
-                           
+                
                 @media screen and (min-width: 768px)
                     #verOpciones
                         margin-bottom: 0
@@ -627,6 +634,7 @@
                 justify-content: space-between
                 padding-bottom: 6px
                 padding-top: 6px
+                height: auto
                 &:last-child
                     justify-content: flex-end
             p
@@ -649,6 +657,7 @@
                         background: $lightGrey
             .listo
                 border: none
+                width: 100%
             .fa
                 font-size: 10px
                 position: relative
@@ -661,7 +670,8 @@
                 .buttonContainer
                     .controlPasajeros
                         padding: 6px 12px
-
+                .listo
+                    width: 80px
         .tooltipLugares
             display: none
             flex-direction: column
@@ -764,7 +774,7 @@
                     top: 70px
                     .button
                         float: right
-                        width: 120px
+                        width: 80px
                     .numeroHabitaciones
                         justify-content: flex-start
                         p
