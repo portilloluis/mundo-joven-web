@@ -458,11 +458,13 @@
         #buscador .tab-content .inputsection .errorValidation .fa {
           color: #9d000d; }
       #buscador .tab-content .inputsection .errorMensaje {
-        color: white;
-        position: absolute;
         bottom: -21px;
+        color: white;
+        display: block;
+        font-size: 14px;
         margin-bottom: 0;
-        font-size: 14px; }
+        left: 0;
+        position: absolute; }
       #buscador .tab-content .inputsection > div {
         background: white;
         border-bottom: 1px solid #727176;

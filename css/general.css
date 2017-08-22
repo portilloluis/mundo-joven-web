@@ -61,6 +61,10 @@ button, input[type=submit], .button {
 input::placeholder {
   color: #444242; }
 
+select {
+  background-color: transparent;
+  border-radius: 0; }
+
 .button {
   background-color: #ff4454;
   border: none;
